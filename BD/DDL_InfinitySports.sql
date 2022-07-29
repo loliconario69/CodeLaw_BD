@@ -10,6 +10,11 @@ CREATE TABLE `Paises` (
 );
 
 #---------------ENTIDADES------------------#
+CREATE TABLE `Publicidad` (
+  `Nombre` varchar(20) not null,
+  `URL` varchar(100) not null,
+  PRIMARY KEY (`Nombre`)
+);
 
 CREATE TABLE `Usuarios` (
   `Email` varchar(20),
@@ -17,6 +22,13 @@ CREATE TABLE `Usuarios` (
   `Apellido` varchar(20) not null,
   `Contrasenia` varchar(50) not null,
   `TipoDeCuenta` ENUM ('Normal', 'Premium') not null,
+  PRIMARY KEY (`Email`)
+);
+CREATE TABLE `Administradores` (
+  `Email` varchar(20),
+  `Nombre` varchar(20) not null,
+  `Apellido` varchar(20) not null,
+  `Contrasenia` varchar(50) not null,
   `Rol` ENUM ('Publico', 'Funcionario', 'Administrador') not null,
   PRIMARY KEY (`Email`)
 );
