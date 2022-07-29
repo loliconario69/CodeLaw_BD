@@ -227,3 +227,29 @@ CREATE TABLE `EquipoCompite` (
   FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
   FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
 );
+
+DELIMITER $$
+CREATE TRIGGER comp_de_deport_BorrarCompetencia
+AFTER DELETE ON comp_de_deport
+FOR EACH ROW
+BEGIN
+	DELETE FROM competicion WHERE
+		Id = OLD.idComp;
+END$$
+
+CREATE TRIGGER PersonaPertenece_BorrarJugador
+AFTER DELETE ON personapertenece
+FOR EACH ROW
+BEGIN
+	DELETE FROM persona WHERE
+		Id = OLD.IdPersona;
+END$$
+
+CREATE TRIGGER EquipoPertenece_BorrarEquipo
+AFTER DELETE ON equipopertenece
+FOR EACH ROW
+BEGIN
+	DELETE FROM equipo WHERE
+		Id = OLD.IdEquipo;
+END$$
+DELIMITER ;
