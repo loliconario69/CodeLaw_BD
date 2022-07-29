@@ -63,17 +63,17 @@ CREATE TABLE `Persona` (
 CREATE TABLE `Jugador` (
   `Id` int unsigned,
   PRIMARY KEY (`Id`),
-  FOREIGN KEY (`Id`) REFERENCES `Persona` (`Id`)
+  FOREIGN KEY (`Id`) REFERENCES `Persona` (`Id`) ON DELETE CASCADE
 );
 CREATE TABLE `Juez` (
   `Id` int unsigned,
   PRIMARY KEY (`Id`),
-  FOREIGN KEY (`Id`) REFERENCES `Persona` (`Id`)
+  FOREIGN KEY (`Id`) REFERENCES `Persona` (`Id`)  ON DELETE CASCADE
 );
 CREATE TABLE `Entrenador` (
   `Id` int unsigned,
   PRIMARY KEY (`Id`),
-  FOREIGN KEY (`Id`) REFERENCES `Persona` (`Id`)
+  FOREIGN KEY (`Id`) REFERENCES `Persona` (`Id`)  ON DELETE CASCADE
 );
 
 #---------------RELACIONES------------------#
@@ -84,7 +84,7 @@ CREATE TABLE `SeSuscribeParJugador` (
   `IdJugador1` int unsigned,
   `IdJugador2` int unsigned,
   PRIMARY KEY (`EmailUsuario`, `IdComp`, `IdJugador1`, `IdJugador2`),
-  FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`),
+  FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
   FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`),
   FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
   FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`)
@@ -95,7 +95,7 @@ CREATE TABLE `SeSuscribeParEquipo` (
   `IdEquipo1` int unsigned,
   `IdEquipo2` int unsigned,
   PRIMARY KEY (`EmailUsuario`, `IdComp`, `IdEquipo1`, `IdEquipo2`),
-  FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`),
+  FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
   FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`),
   FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
   FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
@@ -104,7 +104,7 @@ CREATE TABLE `SeSuscribeVariosJugadores` (
   `EmailUsuario` varchar(20),
   `IdComp` int unsigned,
   PRIMARY KEY (`EmailUsuario`, `IdComp`),
-  FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`),
+  FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
   FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`)
 );
 
@@ -120,7 +120,7 @@ CREATE TABLE `Comp_de_deport` (
   `IdComp` int unsigned,
   PRIMARY KEY (`Deporte`, `IdComp`),
   FOREIGN KEY (`Deporte`) REFERENCES `Deporte` (`Nombre`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON UPDATE CASCADE ON DELETE CASCADE
+  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE
 );
 CREATE TABLE `EquipoPertenece` (
   `IdEquipo` int unsigned,
@@ -135,7 +135,7 @@ CREATE TABLE `J_pertenece_E` (
   `IdEquipo` int unsigned,
   `posicion` varchar(20),
   PRIMARY KEY (`IdJugador`, `IdEquipo`),
-  FOREIGN KEY (`IdJugador`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`IdJugador`) REFERENCES `Jugador` (`Id`),
   FOREIGN KEY (`IdEquipo`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE
 );
 
@@ -144,8 +144,8 @@ CREATE TABLE `Juez_ParJugador` (
   `IdJugador2` int unsigned,
   `IdJuez` int unsigned,
   PRIMARY KEY (`IdJugador1`, `IdJugador2`, `IdJuez`),
-  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
+  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`),
   FOREIGN KEY (`IdJuez`) REFERENCES `Juez` (`Id`) ON DELETE CASCADE
   );
 CREATE TABLE `Juez_ParEquipo` (
@@ -153,15 +153,15 @@ CREATE TABLE `Juez_ParEquipo` (
   `IdEquipo2` int unsigned,
   `IdJuez` int unsigned,
   PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `IdJuez`),
-  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
+  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`),
   FOREIGN KEY (`IdJuez`) REFERENCES `Juez` (`Id`) ON DELETE CASCADE
   );
 CREATE TABLE `Juez_VariosJugadores` (
   `IdJuez` int unsigned,
   `IdComp` int unsigned,
   PRIMARY KEY (`IdJuez`, `IdComp`),
-  FOREIGN KEY (`IdJuez`) REFERENCES `Juez` (`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`IdJuez`) REFERENCES `Juez` (`Id`),
   FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE
 );  
 
@@ -169,14 +169,14 @@ CREATE TABLE `Entrenador_Jugador` (
   `IdJugador` int unsigned,
   `IdEntrenador` int unsigned,
   PRIMARY KEY (`IdJugador`, `IdEntrenador`),
-  FOREIGN KEY (`IdJugador`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`IdJugador`) REFERENCES `Jugador` (`Id`),
   FOREIGN KEY (`IdEntrenador`) REFERENCES `Entrenador` (`Id`) ON DELETE CASCADE
 );
 CREATE TABLE `Entrenador_Equipo` (
   `IdEquipo` int unsigned,
   `IdEntrenador` int unsigned,
   PRIMARY KEY (`IdEquipo`, `IdEntrenador`),
-  FOREIGN KEY (`IdEquipo`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE,
+  FOREIGN KEY (`IdEquipo`) REFERENCES `Equipo` (`Id`),
   FOREIGN KEY (`IdEntrenador`) REFERENCES `Entrenador` (`Id`) ON DELETE CASCADE
 ); 
 
@@ -185,26 +185,26 @@ CREATE TABLE `JugadoresParticipan` (
   `IdJugador2` int unsigned,
   `IdComp` int unsigned,
   PRIMARY KEY (`IdJugador1`, `IdJugador2`, `IdComp`),
-  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
+  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`),
+  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE
 );
 CREATE TABLE `JugadorParticipa` (
   `IdJugador` int unsigned,
   `IdComp` int unsigned,
   `Puntos` varchar(10),
   PRIMARY KEY (`IdJugador`, `IdComp`),
-  FOREIGN KEY (`IdJugador`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`IdJugador`) REFERENCES `Jugador` (`Id`),
+  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE
 );
 CREATE TABLE `EquiposParticipan` (
   `IdEquipo1` int unsigned,
   `IdEquipo2` int unsigned,
   `IdComp` int unsigned,
   PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `IdComp`),
-  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
+  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`),
+  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE
 );
 
 CREATE TABLE `JugadorCompite` (
@@ -214,8 +214,8 @@ CREATE TABLE `JugadorCompite` (
   `PuntosJugador1` varchar(10),
   `PuntosJugador2` varchar(10),
   PRIMARY KEY (`IdJugador1`, `IdJugador2`, `Fecha`),
-  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`) ON DELETE CASCADE
+  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
+  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`)
 );
 CREATE TABLE `EquipoCompite` (
   `IdEquipo1` int unsigned,
@@ -224,23 +224,6 @@ CREATE TABLE `EquipoCompite` (
   `PuntosEquipo1` varchar(10),
   `PuntosEquipo2` varchar(10),
   PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `Fecha`),
-  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`) ON DELETE CASCADE
+  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
+  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
