@@ -29,7 +29,7 @@ CREATE TABLE `Administradores` (
   `Nombre` varchar(20) not null,
   `Apellido` varchar(20) not null,
   `Contrasenia` varchar(50) not null,
-  `Rol` ENUM ('Publico', 'Funcionario', 'Administrador') not null,
+  `Rol` ENUM ('Funcionario', 'Administrador') not null,
   PRIMARY KEY (`Email`)
 );
 
@@ -92,23 +92,19 @@ CREATE TABLE `Entrenador` (
 
 CREATE TABLE `SeSuscribeParJugador` (
   `EmailUsuario` varchar(20),
-  `IdComp` int unsigned,
   `IdJugador1` int unsigned,
   `IdJugador2` int unsigned,
-  PRIMARY KEY (`EmailUsuario`, `IdComp`, `IdJugador1`, `IdJugador2`),
+  PRIMARY KEY (`EmailUsuario`, `IdJugador1`, `IdJugador2`),
   FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`),
   FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
   FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`)
 );
 CREATE TABLE `SeSuscribeParEquipo` (
   `EmailUsuario` varchar(20),
-  `IdComp` int unsigned,
   `IdEquipo1` int unsigned,
   `IdEquipo2` int unsigned,
-  PRIMARY KEY (`EmailUsuario`, `IdComp`, `IdEquipo1`, `IdEquipo2`),
+  PRIMARY KEY (`EmailUsuario`, `IdEquipo1`, `IdEquipo2`),
   FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`),
   FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
   FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
 );
