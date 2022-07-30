@@ -90,23 +90,44 @@ CREATE TABLE `Entrenador` (
 
 #---------------RELACIONES------------------#
 
+CREATE TABLE `JugadorCompite` (
+  `IdJugador1` int unsigned,
+  `IdJugador2` int unsigned,
+  `Fecha` datetime,
+  `PuntosJugador1` varchar(10),
+  `PuntosJugador2` varchar(10),
+  PRIMARY KEY (`IdJugador1`, `IdJugador2`, `Fecha`),
+  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
+  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`)
+);
+CREATE TABLE `EquipoCompite` (
+  `IdEquipo1` int unsigned,
+  `IdEquipo2` int unsigned,
+  `Fecha` datetime,
+  `PuntosEquipo1` varchar(10),
+  `PuntosEquipo2` varchar(10),
+  PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `Fecha`),
+  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
+  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
+);
+
 CREATE TABLE `SeSuscribeParJugador` (
   `EmailUsuario` varchar(20),
   `IdJugador1` int unsigned,
   `IdJugador2` int unsigned,
-  PRIMARY KEY (`EmailUsuario`, `IdJugador1`, `IdJugador2`),
+  `Fecha` datetime,
+  PRIMARY KEY (`EmailUsuario`, `IdJugador1`, `IdJugador2`, `Fecha`),
   FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
-  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`)
+  FOREIGN KEY (`IdJugador1`,`IdJugador2`,`Fecha`) REFERENCES `jugadorcompite` (`IdJugador1`,`IdJugador2`,`Fecha`)
 );
 CREATE TABLE `SeSuscribeParEquipo` (
   `EmailUsuario` varchar(20),
   `IdEquipo1` int unsigned,
   `IdEquipo2` int unsigned,
-  PRIMARY KEY (`EmailUsuario`, `IdEquipo1`, `IdEquipo2`),
+  `Fecha` datetime,
+  PRIMARY KEY (`EmailUsuario`, `IdEquipo1`, `IdEquipo2`, `Fecha`),
   FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
-  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
-  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
+  FOREIGN KEY (`IdEquipo1`,`IdEquipo2`,`Fecha`) REFERENCES `equipocompite` (`IdEquipo1`,`IdEquipo2`,`Fecha`)
 );
 CREATE TABLE `SeSuscribeVariosJugadores` (
   `EmailUsuario` varchar(20),
@@ -215,26 +236,7 @@ CREATE TABLE `EquiposParticipan` (
   FOREIGN KEY (`IdComp`) REFERENCES `Competicion` (`Id`) ON DELETE CASCADE
 );
 
-CREATE TABLE `JugadorCompite` (
-  `IdJugador1` int unsigned,
-  `IdJugador2` int unsigned,
-  `Fecha` datetime,
-  `PuntosJugador1` varchar(10),
-  `PuntosJugador2` varchar(10),
-  PRIMARY KEY (`IdJugador1`, `IdJugador2`, `Fecha`),
-  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
-  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`)
-);
-CREATE TABLE `EquipoCompite` (
-  `IdEquipo1` int unsigned,
-  `IdEquipo2` int unsigned,
-  `Fecha` datetime,
-  `PuntosEquipo1` varchar(10),
-  `PuntosEquipo2` varchar(10),
-  PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `Fecha`),
-  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
-  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`)
-);
+
 
 DELIMITER $$
 CREATE TRIGGER comp_de_deport_BorrarCompetencia
