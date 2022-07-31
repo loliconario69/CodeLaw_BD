@@ -171,19 +171,19 @@ CREATE TABLE `J_pertenece_E` (
 CREATE TABLE `Juez_ParJugador` (
   `IdJugador1` int unsigned,
   `IdJugador2` int unsigned,
+  `Fecha` datetime,
   `IdJuez` int unsigned,
-  PRIMARY KEY (`IdJugador1`, `IdJugador2`, `IdJuez`),
-  FOREIGN KEY (`IdJugador1`) REFERENCES `Jugador` (`Id`),
-  FOREIGN KEY (`IdJugador2`) REFERENCES `Jugador` (`Id`),
+  PRIMARY KEY (`IdJugador1`, `IdJugador2`, `Fecha`, `IdJuez`),
+  FOREIGN KEY (`IdJugador1`,`IdJugador2`,`Fecha`) REFERENCES `jugadorcompite` (`IdJugador1`,`IdJugador2`,`Fecha`),
   FOREIGN KEY (`IdJuez`) REFERENCES `Juez` (`Id`) ON DELETE CASCADE
   );
 CREATE TABLE `Juez_ParEquipo` (
   `IdEquipo1` int unsigned,
   `IdEquipo2` int unsigned,
+  `Fecha` datetime,
   `IdJuez` int unsigned,
-  PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `IdJuez`),
-  FOREIGN KEY (`IdEquipo1`) REFERENCES `Equipo` (`Id`),
-  FOREIGN KEY (`IdEquipo2`) REFERENCES `Equipo` (`Id`),
+  PRIMARY KEY (`IdEquipo1`, `IdEquipo2`, `Fecha`, `IdJuez`),
+  FOREIGN KEY (`IdEquipo1`,`IdEquipo2`,`Fecha`) REFERENCES `equipocompite` (`IdEquipo1`,`IdEquipo2`,`Fecha`),
   FOREIGN KEY (`IdJuez`) REFERENCES `Juez` (`Id`) ON DELETE CASCADE
   );
 CREATE TABLE `Juez_VariosJugadores` (
