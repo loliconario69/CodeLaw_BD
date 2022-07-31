@@ -151,3 +151,38 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'D:/Users/Loliconario/Desktop/CodeLaw_BD_y_SO/BD/CSV/Entrenador_Jugador.csv' 
+INTO TABLE entrenador_jugador 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'D:/Users/Loliconario/Desktop/CodeLaw_BD_y_SO/BD/CSV/Entrenador_Equipo.csv' 
+INTO TABLE entrenador_equipo 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'D:/Users/Loliconario/Desktop/CodeLaw_BD_y_SO/BD/CSV/JugadoresParticipan.csv' 
+INTO TABLE jugadoresparticipan 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'D:/Users/Loliconario/Desktop/CodeLaw_BD_y_SO/BD/CSV/EquiposParticipan.csv' 
+INTO TABLE equiposparticipan 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA INFILE 'D:/Users/Loliconario/Desktop/CodeLaw_BD_y_SO/BD/CSV/JugadorParticipa.csv' 
+INTO TABLE jugadorparticipa 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
