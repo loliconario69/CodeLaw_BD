@@ -4,8 +4,8 @@ USE InfinitySports;
 
 
 CREATE TABLE `Paises` (
-  `Nombre` varchar(15) not null,
-  `Ciudad` varchar(20) not null,
+  `Nombre` varchar(20) not null,
+  `Ciudad` varchar(40) not null,
   PRIMARY KEY (`Nombre`, `Ciudad`)
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE `Publicidad` (
 );
 
 CREATE TABLE `Usuarios` (
-  `Email` varchar(20),
+  `Email` varchar(25),
   `Nombre` varchar(20) not null,
   `Apellido` varchar(20) not null,
   `Contrasenia` varchar(50) not null,
@@ -25,7 +25,7 @@ CREATE TABLE `Usuarios` (
   PRIMARY KEY (`Email`)
 );
 CREATE TABLE `Administradores` (
-  `Email` varchar(20),
+  `Email` varchar(25),
   `Nombre` varchar(20) not null,
   `Apellido` varchar(20) not null,
   `Contrasenia` varchar(50) not null,
@@ -35,7 +35,7 @@ CREATE TABLE `Administradores` (
 
 CREATE TABLE `Competicion` (
   `Id` int unsigned auto_increment,
-  `Nombre` varchar(30) not null,
+  `Nombre` varchar(35) not null,
   `Etapa` varchar(30) not null,
   `FechaInicio` datetime not null,
   `FechaFin` datetime not null,
@@ -52,9 +52,9 @@ CREATE TABLE `Deporte` (
 
 CREATE TABLE `Equipo` (
   `Id` int unsigned auto_increment,
-  `Nombre` varchar(20),
+  `Nombre` varchar(30),
   `Pais` varchar(15) not null,
-  `Ciudad` varchar(20) not null,
+  `Ciudad` varchar(40) not null,
   PRIMARY KEY (`Id`),
   FOREIGN KEY (`Pais`, `Ciudad`) REFERENCES `Paises` (`Nombre`, `Ciudad`)
 );
@@ -67,7 +67,7 @@ CREATE TABLE `Persona` (
   `SegundoApellido` varchar(15),
   `FechaNacimiento` date  not null,
   `Pais` varchar(15) not null,
-  `Ciudad` varchar(20) not null,
+  `Ciudad` varchar(40) not null,
   PRIMARY KEY (`Id`),
   FOREIGN KEY (`Pais`, `Ciudad`) REFERENCES `Paises` (`Nombre`, `Ciudad`)
 );
@@ -112,7 +112,7 @@ CREATE TABLE `EquipoCompite` (
 );
 
 CREATE TABLE `SeSuscribeParJugador` (
-  `EmailUsuario` varchar(20),
+  `EmailUsuario` varchar(25),
   `IdJugador1` int unsigned,
   `IdJugador2` int unsigned,
   `Fecha` datetime,
@@ -121,7 +121,7 @@ CREATE TABLE `SeSuscribeParJugador` (
   FOREIGN KEY (`IdJugador1`,`IdJugador2`,`Fecha`) REFERENCES `jugadorcompite` (`IdJugador1`,`IdJugador2`,`Fecha`)
 );
 CREATE TABLE `SeSuscribeParEquipo` (
-  `EmailUsuario` varchar(20),
+  `EmailUsuario` varchar(25),
   `IdEquipo1` int unsigned,
   `IdEquipo2` int unsigned,
   `Fecha` datetime,
@@ -130,7 +130,7 @@ CREATE TABLE `SeSuscribeParEquipo` (
   FOREIGN KEY (`IdEquipo1`,`IdEquipo2`,`Fecha`) REFERENCES `equipocompite` (`IdEquipo1`,`IdEquipo2`,`Fecha`)
 );
 CREATE TABLE `SeSuscribeVariosJugadores` (
-  `EmailUsuario` varchar(20),
+  `EmailUsuario` varchar(25),
   `IdComp` int unsigned,
   PRIMARY KEY (`EmailUsuario`, `IdComp`),
   FOREIGN KEY (`EmailUsuario`) REFERENCES `Usuarios` (`Email`) ON DELETE CASCADE,
