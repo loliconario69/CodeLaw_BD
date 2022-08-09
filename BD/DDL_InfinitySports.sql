@@ -9,11 +9,11 @@ CREATE TABLE Usuario (
   Nombre varchar(30) not null,
   Email varchar(30),
   Contrasenia varchar(100) not null,
-  Telefono smallint not null, # ---------------Telefono?
+  Telefono smallint not null,
   EsPremium bool not null,
   PRIMARY KEY (Id)
 );
-CREATE TABLE Administrador ( # -------NO DEBERIA SER UNA SOLA TABLA?
+CREATE TABLE Administrador (
 	Id int unsigned auto_increment,
     Contraseña varchar(100) not null,
     Tipo bool not null,
@@ -30,7 +30,7 @@ CREATE TABLE Publicidad (
 	Grupo varchar(15) not null,
     Descripcion varchar(100) not null,
     Imagen varchar(255) not null,
-    Tipo varchar(20) not null,       #-----------¿QUE ES?-------
+    Tipo tinyint not null,
     PRIMARY KEY (Id)
 );
 
@@ -38,9 +38,9 @@ CREATE TABLE Competencia (
 	Id int unsigned auto_increment,
     Nombre varchar(30) not null,
     Lugar varchar(30),
-    Tipo varchar(20) not null, #-----------Tipo?
+    #Tipo varchar(20) not null, --------para implementar si nos da el tiempo
     Imagen varchar(255),
-    FechaInicio date not null,  #-----------------Agregé fecha inicio y fin
+    FechaInicio date not null,
     FechaFin date not null,
     PRIMARY KEY (Id)
 );
@@ -61,13 +61,16 @@ CREATE TABLE Deporte (
 
 CREATE TABLE Juez (
 	Id int unsigned auto_increment,
-    Nombre varchar(60) not null, # ---------Atributo compuesto?
+    PrimerNombre varchar(15) not null,
+    SegundoNombre varchar(15),
+    PrimerApellido varchar(15) not null,
+    SegundoApellido varchar(15),
     PRIMARY KEY (Id)
 );
 
 CREATE TABLE Encuentro (
 	Id int unsigned auto_increment,
-    Fecha datetime not null, # ---------Corrección de MR encuentro
+    Fecha datetime not null,
     Lugar varchar(30),
     PRIMARY KEY (Id)
 );
