@@ -243,23 +243,51 @@ DELIMITER ;
 
 
 
-#PRUEBA DE triggers
+#PRUEBA DE triggers suscipcion
+/*
 INSERT INTO usuario(Nombre,Email,Contrasenia,Telefono,EsPremium) VALUES ('pepe','email@email.com','asdqgurghr',1234,0);
 
 INSERT INTO contendiente(Imagen,Pais,FechaDeNacimiento) VALUES ('url','no se','2022-01-22');
 INSERT INTO deportista VALUES (1,'nombre1','nombre2','apellido1','apellido2');
 
 INSERT INTO ususcribed VALUES (1,1);
+*/
 
 
 
 
 
+DELIMITER $$
 
+CREATE TRIGGER Deportista_existe
+BEFORE INSERT ON deportista
+FOR EACH ROW
+BEGIN
 
+IF !(NEW.IdContendiente not in (select e.IdContendiente from equipo e)) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'El contendiente es un equipo, no puede ser un jugador';
+END IF;
+END$$
 
+CREATE TRIGGER Equipo_existe
+BEFORE INSERT ON equipo
+FOR EACH ROW
+BEGIN
 
+IF !(NEW.IdContendiente not in (select d.IdContendiente from deportista d)) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'El contendiente es un jugador, no puede ser un equipo';
+END IF;
+END$$
 
+DELIMITER ;
 
+#Prueba de trigger equipo y deportista
+/*
+INSERT INTO contendiente(Imagen,Pais,FechaDeNacimiento) VALUES ('url','no se','2022-01-22');
+INSERT INTO deportista VALUES (1,'nombre1','nombre2','apellido1','apellido2');
+INSERT INTO equipo VALUES (1,'jajaja');
+*/
 
 
