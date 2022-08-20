@@ -15,16 +15,12 @@ CREATE TABLE Usuario (
 );
 CREATE TABLE Administrador (
 	Id int unsigned auto_increment,
+    Email varchar(30) not null,
     Contraseña varchar(100) not null,
     Tipo bool not null,
     PRIMARY KEY (Id)
 );
-CREATE TABLE EmailAdministador (
-	IdAdministrador int unsigned,
-    Email varchar(30) not null,
-    PRIMARY KEY (IdAdministrador),
-    FOREIGN KEY (IdAdministrador) REFERENCES Administrador(Id)
-);
+
 CREATE TABLE Publicidad (
 	Id int unsigned auto_increment,
 	Grupo varchar(15) not null,
@@ -183,10 +179,77 @@ CREATE TABLE CparticipaE (
     FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
 );
 
+# TRIGGERS ----------------------------------------
+
+DELIMITER $$
+
+CREATE TRIGGER UsuscribeD_Premium
+BEFORE INSERT ON ususcribed
+FOR EACH ROW
+BEGIN
+
+DECLARE Premium bool;
+SELECT EsPremium INTO Premium FROM usuario WHERE Id = NEW.IdUsuario;
+
+IF(Premium = 0) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
+    END IF;
+END$$
+
+CREATE TRIGGER UsuscribeEq_Premium
+BEFORE INSERT ON ususcribeeq
+FOR EACH ROW
+BEGIN
+
+DECLARE Premium bool;
+SELECT EsPremium INTO Premium FROM usuario WHERE Id = NEW.IdUsuario;
+
+IF(Premium = 0) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
+    END IF;
+END$$
+
+CREATE TRIGGER UsuscribeEn_Premium
+BEFORE INSERT ON ususcribeen
+FOR EACH ROW
+BEGIN
+
+DECLARE Premium bool;
+SELECT EsPremium INTO Premium FROM usuario WHERE Id = NEW.IdUsuario;
+
+IF(Premium = 0) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
+    END IF;
+END$$
+
+CREATE TRIGGER UsuscribeC_Premium
+BEFORE INSERT ON ususcribec
+FOR EACH ROW
+BEGIN
+
+DECLARE Premium bool;
+SELECT EsPremium INTO Premium FROM usuario WHERE Id = NEW.IdUsuario;
+
+IF(Premium = 0) THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
+    END IF;
+END$$
+
+DELIMITER ;
 
 
 
+#PRUEBA DE triggers
+INSERT INTO usuario(Nombre,Email,Contrasenia,Telefono,EsPremium) VALUES ('pepe','email@email.com','asdqgurghr',1234,0);
 
+INSERT INTO contendiente(Imagen,Pais,FechaDeNacimiento) VALUES ('url','no se','2022-01-22');
+INSERT INTO deportista VALUES (1,'nombre1','nombre2','apellido1','apellido2');
+
+INSERT INTO ususcribed VALUES (1,1);
 
 
 
