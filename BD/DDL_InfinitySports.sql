@@ -179,6 +179,14 @@ CREATE TABLE CparticipaE (
     FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
 );
 
+CREATE TABLE DintegraE (
+	IdDeportista int unsigned,
+    IdEquipo int unsigned,
+    PRIMARY KEY (IdDeportista,IdEquipo),
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(IdContendiente),
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(IdContendiente)
+);
+
 # TRIGGERS ----------------------------------------
 
 DELIMITER $$
