@@ -150,7 +150,7 @@ CREATE TABLE SePracticaDeporte (
     Nombre varchar(30),
     IdDeporte mediumint unsigned,
     PRIMARY KEY (IdCompetencia,Nombre,IdDeporte),
-    FOREIGN KEY (IdCompetencia,Nombre) REFERENCES Etapa(IdCompetencia,Nombre),
+    FOREIGN KEY (IdCompetencia,Nombre) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE,
     FOREIGN KEY (IdDeporte) REFERENCES Deporte(Id)
 );
 
@@ -160,7 +160,7 @@ CREATE TABLE EcontieneE (
     IdEncuentro int unsigned,
     PRIMARY KEY (IdCompetencia,NombreEtapa,IdEncuentro),
     FOREIGN KEY (IdCompetencia,NombreEtapa) REFERENCES Etapa(IdCompetencia,Nombre),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE EtieneJ (
@@ -299,3 +299,34 @@ INSERT INTO equipo VALUES (1,'jajaja');
 */
 
 
+DELIMITER $$
+
+CREATE TRIGGER VerificarFechaEncuentro
+BEFORE INSERT ON encuentro
+FOR EACH ROW
+BEGIN
+
+IF !(NEW.Fecha between (select FechaInicio from competencia) AND (select FechaFin from competencia)) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'Fuera de rango de fechas';
+END IF;
+END$$
+
+CREATE TRIGGER VerificarFechaCompetencia
+BEFORE INSERT ON competencia
+FOR EACH ROW
+BEGIN
+
+IF (NEW.FechaInicio >= NEW.FechaFin) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'FechaInicio no puede ser mayor a FechaFin';
+END IF;
+END$$
+
+DELIMITER ;
+
+#prueba de trigger fechas
+/*
+INSERT INTO competencia(Nombre,Lugar,Imagen,FechaInicio,FechaFin) VALUES ('hola','hola22','imagens','2022-08-20','2022-08-23');
+INSERT INTO encuentro(Fecha,Lugar) VALUES ('2022-08-20 00:00:00','no se');
+*/
