@@ -160,7 +160,7 @@ CREATE TABLE DintegraE (
 	IdDeportista int unsigned,
     IdEquipo int unsigned,
     PRIMARY KEY (IdDeportista,IdEquipo),
-    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id),
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id) ON DELETE CASCADE,
     FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id)
 );
 
@@ -294,3 +294,20 @@ INSERT INTO competencia(Nombre,Lugar,Imagen,FechaInicio,FechaFin) VALUES ('hola'
 INSERT INTO encuentro(Fecha,Lugar) VALUES ('2022-08-20 00:00:00','no se');
 */
 insert into administrador values (null,'cosito@cosito.com','b9be11166d72e9e3ae7fd407165e4bd2',1);
+
+
+DELIMITER $$
+
+CREATE TRIGGER VerificarExistenciaDeEquipo
+BEFORE INSERT ON EparticipaC
+FOR EACH ROW
+BEGIN
+
+IF !(NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p)) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'El equipo no existe en ParticipaEn';
+END IF;
+
+END$$
+
+DELIMITER ;
