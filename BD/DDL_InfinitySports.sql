@@ -71,7 +71,7 @@ CREATE TABLE Encuentro (
 );
 
 CREATE TABLE Equipo (
-	Id int unsigned,
+	Id int unsigned auto_increment,
     Nombre varchar(30) not null,
     Imagen varchar(255),
     Pais varchar(20) not null,
@@ -79,7 +79,7 @@ CREATE TABLE Equipo (
     PRIMARY KEY (Id)
 );
 CREATE TABLE Deportista (
-	Id int unsigned,
+	Id int unsigned auto_increment,
     PrimerNombre varchar(15) not null,
     SegundoNombre varchar(15),
     PrimerApellido varchar(15) not null,
