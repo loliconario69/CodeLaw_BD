@@ -159,6 +159,7 @@ CREATE TABLE EtieneJ (
 CREATE TABLE DintegraE (
 	IdDeportista int unsigned,
     IdEquipo int unsigned,
+    posicion varchar(30),
     PRIMARY KEY (IdDeportista,IdEquipo),
     FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id) ON DELETE CASCADE,
     FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id)
@@ -303,11 +304,26 @@ BEFORE INSERT ON EparticipaC
 FOR EACH ROW
 BEGIN
 
-IF !(NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p)) THEN
+IF (NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p)) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El equipo no existe en ParticipaEn';
 END IF;
 
 END$$
 
+CREATE TRIGGER VerificarIntegracionDeDeportistaEnEquipo
+BEFORE INSERT ON participaen
+FOR EACH ROW
+BEGIN
+
+IF (select exists(select IdDeportista,IdEquipo from dintegrae WHERE IdDeportista = NEW.IdDeportista and IdEquipo = NEW.IdEquipo) = 0) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'El deportista no integra el equipo';
+END IF;
+
+END$$
+
 DELIMITER ;
+
+
+
