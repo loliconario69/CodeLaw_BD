@@ -8,7 +8,7 @@ CREATE TABLE Usuario (
   Id int unsigned auto_increment,
   Nombre varchar(30) not null,
   Email varchar(30),
-  Contrasenia varchar(100) not null,
+  Contraseña varchar(100) not null,
   Telefono smallint not null,
   EsPremium bool not null,
   PRIMARY KEY (Id)
@@ -34,7 +34,6 @@ CREATE TABLE Competencia (
 	Id int unsigned auto_increment,
     Nombre varchar(30) not null,
     Lugar varchar(30),
-    #Tipo varchar(20) not null, --------para implementar si nos da el tiempo
     Imagen varchar(255),
     FechaInicio date not null,
     FechaFin date not null,
@@ -71,39 +70,25 @@ CREATE TABLE Encuentro (
     PRIMARY KEY (Id)
 );
 
-CREATE TABLE Contendiente (
-	Id int unsigned auto_increment,
+CREATE TABLE Equipo (
+	Id int unsigned,
+    Nombre varchar(30) not null,
+    Imagen varchar(255),
+    Pais varchar(20) not null,
+    FechaCreacion date,
+    PRIMARY KEY (Id)
+);
+CREATE TABLE Deportista (
+	Id int unsigned,
+    PrimerNombre varchar(15) not null,
+    SegundoNombre varchar(15),
+    PrimerApellido varchar(15) not null,
+    SegundoApellido varchar(15),
     Imagen varchar(255),
     Pais varchar(20) not null,
     FechaDeNacimiento date,
     PRIMARY KEY (Id)
 );
-
-CREATE TABLE Resultado (
-	IdContendiente int unsigned,
-	IdEncuentro int unsigned,
-    Tiempo time,
-    Puntaje mediumint,
-    PRIMARY KEY (IdContendiente,IdEncuentro),
-    FOREIGN KEY (IdContendiente) REFERENCES Contendiente(Id),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
-);
-CREATE TABLE Equipo (
-	IdContendiente int unsigned,
-    Nombre varchar(30) not null,
-    PRIMARY KEY (IdContendiente),
-    FOREIGN KEY (IdContendiente) REFERENCES Contendiente(Id)
-);
-CREATE TABLE Deportista (
-	IdContendiente int unsigned,
-    PrimerNombre varchar(15) not null,
-    SegundoNombre varchar(15),
-    PrimerApellido varchar(15) not null,
-    SegundoApellido varchar(15),
-    PRIMARY KEY (IdContendiente),
-    FOREIGN KEY (IdContendiente) REFERENCES Contendiente(Id)
-);
-
 # RELACIONES ----------------------------------------
 
 CREATE TABLE UconsumeP (
@@ -119,14 +104,14 @@ CREATE TABLE UsuscribeD (
     IdDeportista int unsigned,
     PRIMARY KEY (IdUsuario,IdDeportista),
     FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdDeportista) REFERENCES Deportista(IdContendiente)
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id)
 );
 CREATE TABLE UsuscribeEq (
 	IdUsuario int unsigned,
     IdEquipo int unsigned,
     PRIMARY KEY (IdUsuario,IdEquipo),
     FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdEquipo) REFERENCES Equipo(IdContendiente)
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id)
 );
 
 CREATE TABLE UsuscribeEn (
@@ -171,21 +156,35 @@ CREATE TABLE EtieneJ (
     FOREIGN KEY (IdJuez) REFERENCES Juez(Id)
 );
 
-CREATE TABLE CparticipaE (
-	IdContendiente int unsigned,
-    IdEncuentro int unsigned,
-    PRIMARY KEY (IdContendiente,IdEncuentro),
-    FOREIGN KEY (IdContendiente) REFERENCES Contendiente(Id),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
-);
-
 CREATE TABLE DintegraE (
 	IdDeportista int unsigned,
     IdEquipo int unsigned,
     PRIMARY KEY (IdDeportista,IdEquipo),
-    FOREIGN KEY (IdDeportista) REFERENCES Deportista(IdContendiente),
-    FOREIGN KEY (IdEquipo) REFERENCES Equipo(IdContendiente)
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id),
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id)
 );
+
+CREATE TABLE ParticipaEn (
+	IdDeportista int unsigned,
+    IdEquipo int unsigned,
+    IdEncuentro int unsigned,
+    Tiempo time,
+    Puntaje int,
+    PRIMARY KEY (IdDeportista,IdEquipo,IdEncuentro),
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id),
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id),
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
+);
+
+CREATE TABLE EparticipaC (
+    IdEquipo int unsigned,
+    IdCompetencia int unsigned,
+    Puntaje int,
+    PRIMARY KEY (IdEquipo,IdCompetencia),
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id),
+    FOREIGN KEY (IdCompetencia) REFERENCES Competencia(Id)
+);
+
 
 # TRIGGERS ----------------------------------------
 
@@ -263,42 +262,6 @@ INSERT INTO ususcribed VALUES (1,1);
 
 
 
-
-
-DELIMITER $$
-
-CREATE TRIGGER Deportista_existe
-BEFORE INSERT ON deportista
-FOR EACH ROW
-BEGIN
-
-IF !(NEW.IdContendiente not in (select e.IdContendiente from equipo e)) THEN
-           SIGNAL SQLSTATE '45000'
-		   SET MESSAGE_TEXT = 'El contendiente es un equipo, no puede ser un jugador';
-END IF;
-END$$
-
-CREATE TRIGGER Equipo_existe
-BEFORE INSERT ON equipo
-FOR EACH ROW
-BEGIN
-
-IF !(NEW.IdContendiente not in (select d.IdContendiente from deportista d)) THEN
-           SIGNAL SQLSTATE '45000'
-		   SET MESSAGE_TEXT = 'El contendiente es un jugador, no puede ser un equipo';
-END IF;
-END$$
-
-DELIMITER ;
-
-#Prueba de trigger equipo y deportista
-/*
-INSERT INTO contendiente(Imagen,Pais,FechaDeNacimiento) VALUES ('url','no se','2022-01-22');
-INSERT INTO deportista VALUES (1,'nombre1','nombre2','apellido1','apellido2');
-INSERT INTO equipo VALUES (1,'jajaja');
-*/
-
-
 DELIMITER $$
 
 CREATE TRIGGER VerificarFechaEncuentro
@@ -330,3 +293,4 @@ DELIMITER ;
 INSERT INTO competencia(Nombre,Lugar,Imagen,FechaInicio,FechaFin) VALUES ('hola','hola22','imagens','2022-08-20','2022-08-23');
 INSERT INTO encuentro(Fecha,Lugar) VALUES ('2022-08-20 00:00:00','no se');
 */
+insert into administrador values (null,'cosito@cosito.com','b9be11166d72e9e3ae7fd407165e4bd2',1);
