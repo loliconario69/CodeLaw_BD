@@ -7,15 +7,15 @@ USE InfinitySports;
 CREATE TABLE Usuario (
   Id int unsigned auto_increment,
   Nombre varchar(30) not null,
-  Email varchar(30),
-  Contraseña varchar(100) not null,
-  Telefono smallint not null,
+  Email varchar(30) not null unique,
+  Contrasena varchar(100) not null,
+  Telefono int(10) unsigned not null ,
   EsPremium bool not null,
   PRIMARY KEY (Id)
 );
 CREATE TABLE Administrador (
 	Id int unsigned auto_increment,
-    Email varchar(30) not null,
+    Email varchar(30) not null unique,
     Contrasena varchar(100) not null,
     Tipo bool not null,
     PRIMARY KEY (Id)
@@ -33,7 +33,7 @@ CREATE TABLE Publicidad (
 CREATE TABLE Competencia (
 	Id int unsigned auto_increment,
     Nombre varchar(30) not null,
-    Lugar varchar(30),
+    Lugar varchar(30) not null,
     Imagen varchar(255),
     FechaInicio date not null,
     FechaFin date not null,
