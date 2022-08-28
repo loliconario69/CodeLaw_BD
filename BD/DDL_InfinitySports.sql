@@ -72,7 +72,7 @@ CREATE TABLE Encuentro (
 
 CREATE TABLE Equipo (
 	Id int unsigned auto_increment,
-    Nombre varchar(30) not null,
+    Nombre varchar(60) not null,
     Imagen varchar(255),
     Pais varchar(20) not null,
     FechaCreacion date,
