@@ -295,6 +295,18 @@ END IF;
 
 END$$
 
+CREATE TRIGGER VerificarExistenciaDeEncuentroEnEtapa
+BEFORE INSERT ON econtienee
+FOR EACH ROW
+BEGIN
+
+IF (select exists(select IdEncuentro from econtienee WHERE IdEncuentro = NEW.IdEncuentro) = 1) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'El encuentro ya existe';
+END IF;
+
+END$$
+
 DELIMITER ;
 
 

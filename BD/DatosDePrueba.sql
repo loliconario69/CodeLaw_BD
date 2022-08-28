@@ -146,6 +146,28 @@ insert into Encuentro (id, Fecha, Lugar) values (null,'2020-03-23 00:00:00','no 
 insert into Encuentro (id, Fecha, Lugar) values (null,'2021-04-30 00:00:00','no se');
 insert into Encuentro (id, Fecha, Lugar) values (null,'2021-01-23 00:00:00','no se');
 
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-04-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-05-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-06-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-21 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-21 04:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-04-30 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2018-01-23 00:00:00','no se');
+
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-04-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-05-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-06-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-21 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-21 04:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-04-30 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2019-01-23 00:00:00','no se');
+
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -296,56 +318,38 @@ insert into SePracticaDeporte (IdCompetencia, Nombre, IdDeporte) values (3,'Fina
 
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Primera Fase',1);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Primera Fase',2);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Segunda Fase',2);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Segunda Fase',3);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Tercera Fase',3);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Tercera Fase',4);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Fase de grupos',4);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Fase de grupos',5);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Octavos de final',5);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Octavos de final',6);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Cuartos de final',6);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Cuartos de final',7);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Semifinales',7);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Semifinales',8);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Final',9);
 insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (1,'Final',10);
 
-
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Primera Fase',1);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Primera Fase',2);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Segunda Fase',2);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Segunda Fase',3);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Tercera Fase',3);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Tercera Fase',4);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Fase de grupos',4);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Fase de grupos',5);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Octavos de final',5);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Octavos de final',6);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Cuartos de final',6);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Cuartos de final',7);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Semifinales',7);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Semifinales',8);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Final',9);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Final',10);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Primera Fase',11);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Primera Fase',12);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Segunda Fase',13);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Segunda Fase',14);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Tercera Fase',15);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Tercera Fase',16);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Fase de grupos',17);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Fase de grupos',18);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Octavos de final',19);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (2,'Octavos de final',20);
 
 
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Primera Fase',1);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Primera Fase',2);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Segunda Fase',2);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Segunda Fase',3);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Tercera Fase',3);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Tercera Fase',4);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Fase de grupos',4);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Fase de grupos',5);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Octavos de final',5);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Octavos de final',6);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Cuartos de final',6);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Cuartos de final',7);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Semifinales',7);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Semifinales',8);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Final',9);
-insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Final',10);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Primera Fase',21);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Primera Fase',22);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Segunda Fase',23);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Segunda Fase',24);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Tercera Fase',25);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Tercera Fase',26);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Fase de grupos',27);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Fase de grupos',28);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Octavos de final',29);
+insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Octavos de final',30);
+
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -405,6 +409,7 @@ insert into DintegraE (IdDeportista, IdEquipo, Posicion) values (20,34,null);
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (1,15,1,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (2,16,1,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (2,16,2,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (3,17,3,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (4,18,4,null,10);
@@ -420,7 +425,7 @@ insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) val
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (15,1,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (16,1,1);
+insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (16,1,2);
 insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (17,2,1);
 insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (18,3,1);
 insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (19,4,1);
