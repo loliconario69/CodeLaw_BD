@@ -37,6 +37,11 @@ insert into Administrador (id, Email, Contrasena, Tipo) values (null,'cosito@cos
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
+insert into Publicidad (id, Grupo, Descripcion, Imagen, Tipo) values (null,'no se','jajajaj','yeah',1);
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
 insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Libertadores','no lo encotre',null,'2021-02-23','2021-11-27');
 insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Libertadores','no lo encotre',null,'2020-01-21','2020-10-27');
 insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'UEFA Liga de Campeones','no lo encotre',null,'2021-06-22','2022-05-28');
@@ -126,6 +131,112 @@ insert into Juez (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApelli
 insert into Juez (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido) values (null, 'Octaviano',null, 'Camey', 'Ramírez');
 insert into Juez (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido) values (null, 'Osman',null, 'Rosales', 'Arias');
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2020-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-04-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-05-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-06-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-03-21 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-03-21 04:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2020-03-23 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-04-30 00:00:00','no se');
+insert into Encuentro (id, Fecha, Lugar) values (null,'2021-01-23 00:00:00','no se');
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Barcelona',null,'Uruguay','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Bayern Munich',null,'Uruguay','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Inter',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'BATE',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'River Plate',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Roma',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Galatasaray',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Monaco',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Aston Villa',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Olimpia',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Santos',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Zenit',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Santa Cruz',null,'no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'RCD Espanyol',null,'no se','2019-01-23');
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Alejandro', null, 'Mendez', 'Mendez', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Arnulfo', null, 'Carrera', 'García', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Bernardo', null, 'López', null, null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Carlos', null, 'Cetino', 'Ruiz', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Carlos', 'Crispín', 'Aliñado', 'Asturias', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'César', 'Augusto', 'Noriega', 'Morales', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Edgar', 'Raúl', 'Culajay', null, null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Eliza', null, 'Pirír', 'Sabán', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Fermina',null, 'Chajón', 'Soto', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Héctor', 'Leónidas', 'Revolorio', 'Quevedo', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Hugo', 'Leonel', 'López', 'Villacorta', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'José', null, 'Muchuch', 'Chutá', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Manuel', null, 'Encarnación', 'Alarcón', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Marco', 'Tulio', 'Soto', 'Juárez', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'María', 'Inés', 'Vásquez', null, null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Mario', 'Anibal', 'Alemán', 'Galindo', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Mario', null, 'Izariel', 'Villatoro', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Nancy', 'Beatriz', 'Calderón', 'Muller', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Octaviano',null, 'Camey', 'Ramírez', null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Osman',null, 'Rosales', 'Arias', null, 'EEUU', '2019-01-23');
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into UconsumeP (IdUsuario, IdPublicidad) values (1,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (2,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (3,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (4,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (5,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (6,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (7,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (8,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (9,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (10,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (11,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (12,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (13,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (14,1);
+insert into UconsumeP (IdUsuario, IdPublicidad) values (15,1);
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into UsuscribeD (IdUsuario, IdDeportista) values (1,1);
+insert into UsuscribeD (IdUsuario, IdDeportista) values (1,2);
+insert into UsuscribeD (IdUsuario, IdDeportista) values (1,3);
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into UsuscribeEq (IdUsuario, IdEquipo) values (1,1);
+insert into UsuscribeEq (IdUsuario, IdEquipo) values (1,2);
+insert into UsuscribeEq (IdUsuario, IdEquipo) values (1,3);
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into UsuscribeC (IdUsuario, IdCompetencia) values (1,1);
+insert into UsuscribeC (IdUsuario, IdCompetencia) values (1,2);
+insert into UsuscribeC (IdUsuario, IdCompetencia) values (1,3);
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into UsuscribeEn (IdUsuario, IdEncuentro) values (1,1);
+insert into UsuscribeEn (IdUsuario, IdEncuentro) values (1,2);
+insert into UsuscribeEn (IdUsuario, IdEncuentro) values (1,3);
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+
