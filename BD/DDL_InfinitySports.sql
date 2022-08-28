@@ -247,6 +247,7 @@ IF(Premium = 0) THEN
     END IF;
 END$$
 
+/*
 CREATE TRIGGER VerificarFechaEncuentro
 BEFORE INSERT ON encuentro
 FOR EACH ROW
@@ -257,6 +258,7 @@ IF !(NEW.Fecha between (select FechaInicio from competencia) AND (select FechaFi
 		   SET MESSAGE_TEXT = 'Fuera de rango de fechas';
 END IF;
 END$$
+*/
 
 CREATE TRIGGER VerificarFechaCompetencia
 BEFORE INSERT ON competencia
