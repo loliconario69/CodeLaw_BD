@@ -16,7 +16,7 @@ CREATE TABLE Usuario (
 CREATE TABLE Administrador (
 	Id int unsigned auto_increment,
     Email varchar(30) not null,
-    Contraseña varchar(100) not null,
+    Contrasena varchar(100) not null,
     Tipo bool not null,
     PRIMARY KEY (Id)
 );
@@ -247,24 +247,6 @@ IF(Premium = 0) THEN
     END IF;
 END$$
 
-DELIMITER ;
-
-
-
-#PRUEBA DE triggers suscipcion
-/*
-INSERT INTO usuario(Nombre,Email,Contrasenia,Telefono,EsPremium) VALUES ('pepe','email@email.com','asdqgurghr',1234,0);
-
-INSERT INTO contendiente(Imagen,Pais,FechaDeNacimiento) VALUES ('url','no se','2022-01-22');
-INSERT INTO deportista VALUES (1,'nombre1','nombre2','apellido1','apellido2');
-
-INSERT INTO ususcribed VALUES (1,1);
-*/
-
-
-
-DELIMITER $$
-
 CREATE TRIGGER VerificarFechaEncuentro
 BEFORE INSERT ON encuentro
 FOR EACH ROW
@@ -286,18 +268,6 @@ IF (NEW.FechaInicio >= NEW.FechaFin) THEN
 		   SET MESSAGE_TEXT = 'FechaInicio no puede ser mayor a FechaFin';
 END IF;
 END$$
-
-DELIMITER ;
-
-#prueba de trigger fechas
-/*
-INSERT INTO competencia(Nombre,Lugar,Imagen,FechaInicio,FechaFin) VALUES ('hola','hola22','imagens','2022-08-20','2022-08-23');
-INSERT INTO encuentro(Fecha,Lugar) VALUES ('2022-08-20 00:00:00','no se');
-*/
-insert into administrador values (null,'cosito@cosito.com','b9be11166d72e9e3ae7fd407165e4bd2',1);
-
-
-DELIMITER $$
 
 CREATE TRIGGER VerificarExistenciaDeEquipo
 BEFORE INSERT ON EparticipaC
