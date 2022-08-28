@@ -42,7 +42,7 @@ CREATE TABLE Competencia (
 CREATE TABLE Etapa (
 	IdCompetencia int unsigned,
     Nombre varchar(30) not null,
-    Lugar varchar(30) not null,
+    Lugar varchar(50) not null,
     PRIMARY KEY (IdCompetencia,Nombre),
     FOREIGN KEY (IdCompetencia) REFERENCES Competencia(Id)
 );
