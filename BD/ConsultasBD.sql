@@ -16,8 +16,33 @@ INNER JOIN competencia C ON C.Id = E.IdCompetencia;
 
 
 
+#2) dado un evento posicion  | resultados
+
+SELECT 
+	C.FechaInicio as CompetenciaApertura,
+	C.FechaFin as CompetenciaCierre,
+    C.Nombre AS CompetenciaNombre, 
+    E.Nombre AS EtapaNombre,
+    Eq.Nombre as EquipoNombre,
+    EEn.Puntaje
+FROM
+    Etapa E
+        INNER JOIN
+    Competencia C ON 
+		E.Nombre = 'Final'
+        AND C.Nombre = 'Copa Libertadores'
+        AND C.FechaInicio = '2021-02-23'
+        AND C.FechaFin = '2021-11-27'
+        AND E.IdCompetencia = C.Id
+        INNER JOIN EcontieneE EE ON E.IdCompetencia = EE.IdCompetencia AND E.Nombre = EE.NombreEtapa
+        INNER JOIN Encuentro En ON En.Id = EE.IdEncuentro
+        INNER JOIN ParticipaEn P ON En.Id = P.IdEncuentro
+        INNER JOIN Equipo Eq ON P.IdEquipo = Eq.Id
+        INNER JOIN EparticipaEn EEn ON EEn.IdEncuentro = En.Id ORDER BY EEn.Puntaje desc;
+	
 
 
+SELECT * FROM EparticipaEn WHERE IdEquipo = 9;
 
 
 

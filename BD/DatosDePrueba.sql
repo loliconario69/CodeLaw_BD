@@ -434,3 +434,5 @@ insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (21,5,1);
 insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (22,6,1);
 insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (23,7,1);
 insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (24,8,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (24,9,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (24,10,4);
