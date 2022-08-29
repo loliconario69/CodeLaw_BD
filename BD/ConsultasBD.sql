@@ -39,36 +39,6 @@ FROM
         INNER JOIN ParticipaEn P ON En.Id = P.IdEncuentro
         INNER JOIN Equipo Eq ON P.IdEquipo = Eq.Id
         INNER JOIN EparticipaEn EEn ON EEn.IdEncuentro = En.Id ORDER BY EEn.Puntaje desc;
-	
-
-
-SELECT * FROM EparticipaEn WHERE IdEquipo = 9;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #3)dado un encuentro en una fecha info total (integración y resultado)
@@ -106,9 +76,31 @@ INNER JOIN Competencia C ON C.Id = Et.IdCompetencia
 INNER JOIN EparticipaEn EEn ON EEn.IdEquipo = Eq.Id;
 
 
+#4) Dado un participante en un periodo dada detallar su participación (nombre,fecha,sede,evento) COMO MINIMO
 
+SELECT
+C.Nombre as CompetenciaNombre,
+C.Lugar as CompetenciaLugar,
+C.FechaInicio as CompetenciaApertura,
+C.FechaFin as CompetenciaCierre,
 
+E.Nombre as EtapaNombre,
+E.Lugar as EtapaLugar,
+D.Nombre as DeporteDeEtapa,
 
+En.Fecha as EncuentroFecha,
+
+Eq.Nombre as EquipoNombre,
+CONCAT(COALESCE(P.Puntaje,''),COALESCE(P.Tiempo,'')) as Anotacion,
+EEn.Puntaje
+FROM Equipo Eq INNER JOIN ParticipaEn P ON Eq.Id = 15 AND Eq.Id=P.IdEquipo
+INNER JOIN EparticipaEn EEn ON Eq.Id = EEn.IdEquipo
+INNER JOIN Encuentro En ON En.Id=P.IdEncuentro and Fecha between '2020-00-00' and '2022-00-00' #<<<<--------------PERIODO
+INNER JOIN EcontieneE EE ON EE.IdEncuentro = En.Id
+INNER JOIN Etapa E ON E.IdCompetencia = EE.IdCompetencia and E.Nombre = EE.NombreEtapa
+INNER JOIN competencia C ON C.Id = E.IdCompetencia
+INNER JOIN SePracticaDeporte spd ON E.IdCompetencia = spd.IdCompetencia AND E.Nombre = spd.Nombre
+INNER JOIN Deporte D ON D.Id= spd.IdDeporte;
 
 
 
