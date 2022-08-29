@@ -424,13 +424,13 @@ insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) val
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (15,1,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (16,1,2);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (17,2,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (18,3,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (19,4,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (20,4,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (21,5,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (22,6,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (23,7,1);
-insert into EparticipaC (IdEquipo, IdCompetencia, Puntaje) values (24,8,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (15,1,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (16,1,2);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (17,2,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (18,3,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (19,4,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (20,4,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (21,5,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (22,6,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (23,7,1);
+insert into EparticipaEn (IdEquipo, IdEncuentro, Puntaje) values (24,8,1);

@@ -11,6 +11,7 @@ create user 'Auto-Eliminacion'@'127.0.0.1' identified by 'contraseña';
 create user 'Administrador'@'127.0.0.1' identified by 'contraseña';
 create user 'Funcionario'@'127.0.0.1' identified by 'contraseña';
 
+create user 'AdminBD'@'127.0.0.1' identified by 'contraseña';
 
 #------------------------------------------------------------------------
 #------------------------------------------------------------------------
@@ -46,7 +47,7 @@ grant select, insert on infinitysports.usuario to 'Auto-Registro'@'127.0.0.1';
 
 # ADMINISTRADORES grant-----------------------------------------------------
 
-grant all privileges on infinitysports.* to 'Administrador'@'127.0.0.1';
+grant select,insert,delete,update on infinitysports.* to 'Administrador'@'127.0.0.1';
 
 grant insert, update, delete, select on infinitysports.publicidad to 'Funcionario'@'127.0.0.1';
 grant insert, update, delete, select on infinitysports.usuario to 'Funcionario'@'127.0.0.1';

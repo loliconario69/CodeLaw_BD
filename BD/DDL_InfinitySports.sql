@@ -177,13 +177,13 @@ CREATE TABLE ParticipaEn (
     FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
 );
 
-CREATE TABLE EparticipaC (
+CREATE TABLE EparticipaEn (
     IdEquipo int unsigned,
-    IdCompetencia int unsigned,
+    IdEncuentro int unsigned,
     Puntaje int,
-    PRIMARY KEY (IdEquipo,IdCompetencia),
+    PRIMARY KEY (IdEquipo,IdEncuentro),
     FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id),
-    FOREIGN KEY (IdCompetencia) REFERENCES Competencia(Id)
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
 );
 
 
@@ -271,7 +271,7 @@ IF (NEW.FechaInicio >= NEW.FechaFin) THEN
 END IF;
 END$$
 
-CREATE TRIGGER VerificarExistenciaDeEquipo
+/*CREATE TRIGGER VerificarExistenciaDeEquipo
 BEFORE INSERT ON EparticipaC
 FOR EACH ROW
 BEGIN
@@ -281,7 +281,7 @@ IF (NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p)) THEN
 		   SET MESSAGE_TEXT = 'El equipo no existe en ParticipaEn';
 END IF;
 
-END$$
+END$$*/
 
 CREATE TRIGGER VerificarIntegracionDeDeportistaEnEquipo
 BEFORE INSERT ON participaen
