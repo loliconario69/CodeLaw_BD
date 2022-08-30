@@ -11,6 +11,7 @@ CREATE TABLE Usuario (
   Contrasena varchar(100) not null,
   Telefono int(10) unsigned not null ,
   EsPremium bool not null,
+  Modo bool not null,
   PRIMARY KEY (Id)
 );
 CREATE TABLE Administrador (
@@ -95,39 +96,39 @@ CREATE TABLE UconsumeP (
 	IdUsuario int unsigned,
     IdPublicidad int unsigned,
     PRIMARY KEY (IdUsuario,IdPublicidad),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdPublicidad) REFERENCES Publicidad(Id)
+    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdPublicidad) REFERENCES Publicidad(Id) ON DELETE CASCADE
 );
     
 CREATE TABLE UsuscribeD (
 	IdUsuario int unsigned,
     IdDeportista int unsigned,
     PRIMARY KEY (IdUsuario,IdDeportista),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id)
+    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id) ON DELETE CASCADE
 );
 CREATE TABLE UsuscribeEq (
 	IdUsuario int unsigned,
     IdEquipo int unsigned,
     PRIMARY KEY (IdUsuario,IdEquipo),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id)
+    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE UsuscribeEn (
 	IdUsuario int unsigned,
     IdEncuentro int unsigned,
     PRIMARY KEY (IdUsuario,IdEncuentro),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
+    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE UsuscribeC (
 	IdUsuario int unsigned,
     IdCompetencia int unsigned,
     PRIMARY KEY (IdUsuario,IdCompetencia),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id),
-    FOREIGN KEY (IdCompetencia) REFERENCES Competencia(Id)
+    FOREIGN KEY (IdUsuario) REFERENCES Usuario(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdCompetencia) REFERENCES Competencia(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE SePracticaDeporte (
@@ -136,7 +137,7 @@ CREATE TABLE SePracticaDeporte (
     IdDeporte mediumint unsigned,
     PRIMARY KEY (IdCompetencia,Nombre,IdDeporte),
     FOREIGN KEY (IdCompetencia,Nombre) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE,
-    FOREIGN KEY (IdDeporte) REFERENCES Deporte(Id)
+    FOREIGN KEY (IdDeporte) REFERENCES Deporte(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE EcontieneE (
@@ -144,7 +145,7 @@ CREATE TABLE EcontieneE (
     NombreEtapa varchar(30),
     IdEncuentro int unsigned,
     PRIMARY KEY (IdCompetencia,NombreEtapa,IdEncuentro),
-    FOREIGN KEY (IdCompetencia,NombreEtapa) REFERENCES Etapa(IdCompetencia,Nombre),
+    FOREIGN KEY (IdCompetencia,NombreEtapa) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE,
     FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE
 );
 
@@ -152,8 +153,8 @@ CREATE TABLE EtieneJ (
 	IdEncuentro int unsigned,
     IdJuez int unsigned,
     PRIMARY KEY (IdEncuentro,IdJuez),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id),
-    FOREIGN KEY (IdJuez) REFERENCES Juez(Id)
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdJuez) REFERENCES Juez(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE DintegraE (
@@ -162,7 +163,7 @@ CREATE TABLE DintegraE (
     posicion varchar(30),
     PRIMARY KEY (IdDeportista,IdEquipo),
     FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id) ON DELETE CASCADE,
-    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id)
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE ParticipaEn (
@@ -172,9 +173,9 @@ CREATE TABLE ParticipaEn (
     Tiempo time,
     Puntaje int,
     PRIMARY KEY (IdDeportista,IdEquipo,IdEncuentro),
-    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id),
-    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
+    FOREIGN KEY (IdDeportista) REFERENCES Deportista(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE
 );
 
 CREATE TABLE EparticipaEn (
@@ -182,8 +183,8 @@ CREATE TABLE EparticipaEn (
     IdEncuentro int unsigned,
     Puntaje int,
     PRIMARY KEY (IdEquipo,IdEncuentro),
-    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id),
-    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id)
+    FOREIGN KEY (IdEquipo) REFERENCES Equipo(Id) ON DELETE CASCADE,
+    FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE
 );
 
 

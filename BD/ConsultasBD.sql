@@ -87,7 +87,7 @@ C.FechaFin as CompetenciaCierre,
 E.Nombre as EtapaNombre,
 E.Lugar as EtapaLugar,
 D.Nombre as DeporteDeEtapa,
-
+CONCAT(J.PrimerNombre,' ',COALESCE(J.SegundoNombre,''),' ',J.PrimerApellido,' ',COALESCE(J.SegundoApellido,'')) as JuezNombre,
 En.Fecha as EncuentroFecha,
 
 Eq.Nombre as EquipoNombre,
@@ -100,7 +100,9 @@ INNER JOIN EcontieneE EE ON EE.IdEncuentro = En.Id
 INNER JOIN Etapa E ON E.IdCompetencia = EE.IdCompetencia and E.Nombre = EE.NombreEtapa
 INNER JOIN competencia C ON C.Id = E.IdCompetencia
 INNER JOIN SePracticaDeporte spd ON E.IdCompetencia = spd.IdCompetencia AND E.Nombre = spd.Nombre
-INNER JOIN Deporte D ON D.Id= spd.IdDeporte;
+INNER JOIN Deporte D ON D.Id= spd.IdDeporte
+INNER JOIN EtieneJ EJ ON En.Id = EJ.IdEncuentro
+INNER JOIN Juez J ON J.Id = EJ.IdJuez;
 
 
 

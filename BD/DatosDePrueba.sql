@@ -1,38 +1,38 @@
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'ityrone0', 'mvasser0@rambler.ru', 'b9be11166d72e9e3ae7fd407165e4bd2', '099666671', 1);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'charman1', 'jaltofts1@liveinternet.ru', 'b9be11166d72e9e3ae7fd407165e4bd2', '239893925', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'dreadshall2', 'jtremoulet2@issuu.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '887238616', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'lkarppi3', 'acrunkhorn3@google.ru', 'b9be11166d72e9e3ae7fd407165e4bd2', '100114738', 1);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'lpigram4', 'mbentke4@privacy.gov.au', 'b9be11166d72e9e3ae7fd407165e4bd2', '543962541', 1);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'gcupitt5', 'vhug5@wisc.edu', 'b9be11166d72e9e3ae7fd407165e4bd2', '537269834', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'omcdonand6', 'ssamarth6@merriam-webster.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '501016426', 1);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'ggilhouley7', 'kgreder7@topsy.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '470488812', 1);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'saliberti8', 'gmalam8@constantcontact.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '024480693', 1);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'dregorz9', 'kseatter9@blogs.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '251563446', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'blembricka', 'esouleya@ehow.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '995672559', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'agreguolib', 'sbennenb@webs.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '227961144', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'rmacdougallc', 'vpetrelloc@unesco.org', 'b9be11166d72e9e3ae7fd407165e4bd2', '435674228', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'sjirasekd', 'llaminmand@indiegogo.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '539772541', 0);
-insert into Usuario (id, Nombre, Email, Contrasena, Telefono, EsPremium) values (null, 'tbartolomivise', 'tgledee@europa.eu', 'b9be11166d72e9e3ae7fd407165e4bd2', '468081024', 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'ityrone0', 'mvasser0@rambler.ru', 'b9be11166d72e9e3ae7fd407165e4bd2', '099666671', 1, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'charman1', 'jaltofts1@liveinternet.ru', 'b9be11166d72e9e3ae7fd407165e4bd2', '239893925', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'dreadshall2', 'jtremoulet2@issuu.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '887238616', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'lkarppi3', 'acrunkhorn3@google.ru', 'b9be11166d72e9e3ae7fd407165e4bd2', '100114738', 1, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'lpigram4', 'mbentke4@privacy.gov.au', 'b9be11166d72e9e3ae7fd407165e4bd2', '543962541', 1, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'gcupitt5', 'vhug5@wisc.edu', 'b9be11166d72e9e3ae7fd407165e4bd2', '537269834', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'omcdonand6', 'ssamarth6@merriam-webster.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '501016426', 1, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'ggilhouley7', 'kgreder7@topsy.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '470488812', 1, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'saliberti8', 'gmalam8@constantcontact.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '024480693', 1, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'dregorz9', 'kseatter9@blogs.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '251563446', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'blembricka', 'esouleya@ehow.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '995672559', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'agreguolib', 'sbennenb@webs.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '227961144', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'rmacdougallc', 'vpetrelloc@unesco.org', 'b9be11166d72e9e3ae7fd407165e4bd2', '435674228', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'sjirasekd', 'llaminmand@indiegogo.com', 'b9be11166d72e9e3ae7fd407165e4bd2', '539772541', 0, 1);
+insert into Usuario (id, Nombre, Email, Contrasena, Telefono,  EsPremium, Modo) values (null, 'tbartolomivise', 'tgledee@europa.eu', 'b9be11166d72e9e3ae7fd407165e4bd2', '468081024', 1, 1);
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'mrockingham0@jimdo.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
 insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'dgross1@harvard.edu', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'lwoodyatt2@ibm.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'callett3@indiatimes.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'rsmalman4@slate.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'rgallatly5@livejournal.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'aarnold6@hhs.gov', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'ibourner7@whitehouse.gov', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'dfratson8@wikispaces.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'rbrunskill9@nhs.uk', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'twhithalgha@cafepress.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'btebbitb@meetup.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'htolleyc@xrea.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'dkeatesd@blog.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 1);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'catkinsone@shinystat.com', 'b9be11166d72e9e3ae7fd407165e4bd2', 0);
-insert into Administrador (id, Email, Contrasena, Tipo) values (null,'cosito@cosito.com','b9be11166d72e9e3ae7fd407165e4bd2',1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'lwoodyatt2@ibm.com', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'callett3@indiatimes.com', '63a9f0ea7bb98050796b649e85481845', 1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'rsmalman4@slate.com', '63a9f0ea7bb98050796b649e85481845', 1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'rgallatly5@livejournal.com', '63a9f0ea7bb98050796b649e85481845', 1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'aarnold6@hhs.gov', '63a9f0ea7bb98050796b649e85481845', 1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'ibourner7@whitehouse.gov', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'dfratson8@wikispaces.com', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'rbrunskill9@nhs.uk', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'twhithalgha@cafepress.com', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'btebbitb@meetup.com', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'htolleyc@xrea.com', '63a9f0ea7bb98050796b649e85481845', 1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'dkeatesd@blog.com', '63a9f0ea7bb98050796b649e85481845', 1);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null, 'catkinsone@shinystat.com', '63a9f0ea7bb98050796b649e85481845', 0);
+insert into Administrador (id, Email, Contrasena, Tipo) values (null,'cosito@cosito.com','63a9f0ea7bb98050796b649e85481845',1);
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -355,6 +355,7 @@ insert into EcontieneE (IdCompetencia, NombreEtapa, IdEncuentro) values (3,'Octa
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
 insert into EtieneJ (IdEncuentro, IdJuez) values (1,1);
+insert into EtieneJ (IdEncuentro, IdJuez) values (1,2);
 insert into EtieneJ (IdEncuentro, IdJuez) values (2,2);
 insert into EtieneJ (IdEncuentro, IdJuez) values (3,3);
 insert into EtieneJ (IdEncuentro, IdJuez) values (4,4);
