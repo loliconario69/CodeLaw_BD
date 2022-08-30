@@ -136,7 +136,7 @@ CREATE TABLE SePracticaDeporte (
     Nombre varchar(30),
     IdDeporte mediumint unsigned,
     PRIMARY KEY (IdCompetencia,Nombre,IdDeporte),
-    FOREIGN KEY (IdCompetencia,Nombre) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE,
+    FOREIGN KEY (IdCompetencia,Nombre) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (IdDeporte) REFERENCES Deporte(Id) ON DELETE CASCADE
 );
 
@@ -145,7 +145,7 @@ CREATE TABLE EcontieneE (
     NombreEtapa varchar(30),
     IdEncuentro int unsigned,
     PRIMARY KEY (IdCompetencia,NombreEtapa,IdEncuentro),
-    FOREIGN KEY (IdCompetencia,NombreEtapa) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE,
+    FOREIGN KEY (IdCompetencia,NombreEtapa) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (IdEncuentro) REFERENCES Encuentro(Id) ON DELETE CASCADE
 );
 
