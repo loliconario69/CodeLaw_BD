@@ -320,6 +320,17 @@ END IF;
 
 END$$
 
+CREATE TRIGGER VerificarExistenciaDeParticipantes
+AFTER DELETE ON participaen
+FOR EACH ROW
+BEGIN
+
+IF (select IdDeportista from ParticipaEn WHERE IdEncuentro = OLD.IdEncuentro AND IdEquipo = OLD.IdEquipo AND IdDeportista = OLD.IdDeportista )IS NULL THEN
+           DELETE FROM eparticipaen WHERE IdEncuentro = OLD.IdEncuentro AND IdEquipo = OLD.IdEquipo;
+END IF;
+
+END$$
+
 DELIMITER ;
 
 
