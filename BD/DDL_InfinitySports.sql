@@ -272,17 +272,17 @@ IF (NEW.FechaInicio >= NEW.FechaFin) THEN
 END IF;
 END$$
 
-/*CREATE TRIGGER VerificarExistenciaDeEquipo
-BEFORE INSERT ON EparticipaC
+CREATE TRIGGER VerificarExistenciaDeEquipo
+BEFORE INSERT ON EparticipaEn
 FOR EACH ROW
 BEGIN
 
-IF (NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p)) THEN
+IF (NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p WHERE p.IdEncuentro = NEW.IdEncuentro AND p.IdEquipo = NEW.IdEquipo)) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El equipo no existe en ParticipaEn';
 END IF;
 
-END$$*/
+END$$
 
 CREATE TRIGGER VerificarIntegracionDeDeportistaEnEquipo
 BEFORE INSERT ON participaen
@@ -292,6 +292,18 @@ BEGIN
 IF (select exists(select IdDeportista,IdEquipo from dintegrae WHERE IdDeportista = NEW.IdDeportista and IdEquipo = NEW.IdEquipo) = 0) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El deportista no integra el equipo';
+END IF;
+
+END$$
+
+CREATE TRIGGER VerificarExistenciaDePuntajeEquipo
+BEFORE INSERT ON eparticipaen
+FOR EACH ROW
+BEGIN
+
+IF (select exists(select IdEquipo from eparticipaen WHERE IdEquipo = NEW.IdEquipo AND IdEncuentro = NEW.IdEncuentro) = 1) THEN
+           SIGNAL SQLSTATE '45000'
+		   SET MESSAGE_TEXT = 'El equipo ya cuenta con un puntaje';
 END IF;
 
 END$$

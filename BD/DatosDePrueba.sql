@@ -413,13 +413,19 @@ insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) val
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (2,16,1,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (2,16,2,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (3,17,3,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (3,17,2,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (4,18,4,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (4,18,3,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (5,19,5,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (5,19,4,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (6,20,6,null,10);
-insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (7,21,7,null,10);
-insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (8,22,8,null,10);
-insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (9,23,9,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (6,20,4,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (7,21,5,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (8,22,6,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (9,23,7,null,10);
 insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (10,24,10,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (10,24,8,null,10);
+insert into ParticipaEn (IdDeportista, IdEquipo, IdEncuentro,Tiempo,Puntaje) values (10,24,9,null,10);
 
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
