@@ -86,23 +86,23 @@ insert into Etapa (IdCompetencia, Nombre, Lugar) values (3,'Final','Catar, Estad
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into Deporte (Id, Nombre, Imagen) values (null,'FootBall Americano',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'FootBall',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Basketball',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'BaseBall',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Tennis',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Volleyball',null);
+insert into Deporte (Id, Nombre, Imagen) values (null,'FootBall Americano','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\FootBall Americano.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'FootBall','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\FootBall.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'Basketball','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\BascketBall.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'BaseBall','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\BaseBall.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'Tennis','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\Tenis.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'Volleyball','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\VolleyBall.png');
 insert into Deporte (Id, Nombre, Imagen) values (null,'Rugby',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Ajedrez',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Poker',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Boxeo',null);
+insert into Deporte (Id, Nombre, Imagen) values (null,'Ajedrez','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\Ajedrez.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'Poker','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\Pocker.png');
+insert into Deporte (Id, Nombre, Imagen) values (null,'Boxeo','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\Boxeo.png');
 insert into Deporte (Id, Nombre, Imagen) values (null,'MMA/Artes Marciales Mixtas',null);
 insert into Deporte (Id, Nombre, Imagen) values (null,'Lucha libre',null);
 insert into Deporte (Id, Nombre, Imagen) values (null,'Badminton',null);
 insert into Deporte (Id, Nombre, Imagen) values (null,'CSGO',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'DOTA 2',null);
+insert into Deporte (Id, Nombre, Imagen) values (null,'DOTA 2','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\DOTA 2.png');
 insert into Deporte (Id, Nombre, Imagen) values (null,'Valorant',null);
-insert into Deporte (Id, Nombre, Imagen) values (null,'Rocket League',null);
+insert into Deporte (Id, Nombre, Imagen) values (null,'Rocket League','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportes\\\Rocket League.png');
 insert into Deporte (Id, Nombre, Imagen) values (null,'NASCAR',null);
 insert into Deporte (Id, Nombre, Imagen) values (null,'Carreras Formula',null);
 insert into Deporte (Id, Nombre, Imagen) values (null,'Moto GP',null);
@@ -215,6 +215,7 @@ insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Osma
 
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Enzo','Augusto', 'Sgüillaro', 'Cubitto', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\ESI\\\enzo.png', 'Uruguay', '2000-01-23');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Gonzalo', 'Gabriel', 'Maritnez', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\ESI\\\gonzalo.png', 'Uruguay', '2000-11-24');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Momo', null, 'Martinez', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\ESI\\\momo.png', 'Uruguay', '2000-11-24');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Alejandro', null, 'Mendez', 'Mendez', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (1).png', 'EEUU', '2019-01-23');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Arnulfo', null, 'Carrera', 'García', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (2).png', 'EEUU', '2019-01-23');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Bernardo', null, 'López', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (3).png', 'EEUU', '2019-01-23');
