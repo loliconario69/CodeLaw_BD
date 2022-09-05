@@ -171,21 +171,22 @@ insert into Encuentro (id, Fecha, Lugar) values (null,'2019-01-23 00:00:00','no 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Barcelona',null,'Uruguay','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Bayern Munich',null,'Uruguay','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Inter',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'BATE',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'River Plate',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Roma',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Galatasaray',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Monaco',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Aston Villa',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Olimpia',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Santos',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Zenit',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Santa Cruz',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'RCD Espanyol',null,'no se','2019-01-23');
-insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Alejandro Mendez Mendez', null, 'EEUU', '2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'ESI','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\ESI\\\ESI.png','Uruguay','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Barcelona','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (1).png','Uruguay','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Bayern Munich','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (2).png','Uruguay','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Inter','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (3).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'BATE','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (4).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'River Plate','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (5).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Roma','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (6).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Galatasaray','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (7).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Monaco','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (8).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Aston Villa','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (9).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Olimpia','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (10).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Santos','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (11).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Zenit','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (12).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'Santa Cruz','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (13).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null,'RCD Espanyol','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (14).png','no se','2019-01-23');
+insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Alejandro Mendez Mendez', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Equipos\\\Equipo (15).png', 'EEUU', '2019-01-23');
 insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Arnulfo Carrera García', null, 'EEUU', '2019-01-23');
 insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Bernardo López',null, 'EEUU', '2019-01-23');
 insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Carlos Cetino Ruiz', null, 'EEUU', '2019-01-23');
@@ -212,21 +213,23 @@ insert into Equipo (id, Nombre, Imagen, Pais, FechaCreacion) values (null, 'Osma
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Alejandro', null, 'Mendez', 'Mendez', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Arnulfo', null, 'Carrera', 'García', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Bernardo', null, 'López', null, null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Carlos', null, 'Cetino', 'Ruiz', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Carlos', 'Crispín', 'Aliñado', 'Asturias', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'César', 'Augusto', 'Noriega', 'Morales', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Edgar', 'Raúl', 'Culajay', null, null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Eliza', null, 'Pirír', 'Sabán', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Fermina',null, 'Chajón', 'Soto', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Héctor', 'Leónidas', 'Revolorio', 'Quevedo', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Hugo', 'Leonel', 'López', 'Villacorta', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'José', null, 'Muchuch', 'Chutá', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Manuel', null, 'Encarnación', 'Alarcón', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Marco', 'Tulio', 'Soto', 'Juárez', null, 'EEUU', '2019-01-23');
-insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'María', 'Inés', 'Vásquez', null, null, 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Enzo','Augusto', 'Sgüillaro', 'Cubitto', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\ESI\\\enzo.png', 'Uruguay', '2000-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Gonzalo', 'Gabriel', 'Maritnez', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\ESI\\\gonzalo.png', 'Uruguay', '2000-11-24');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Alejandro', null, 'Mendez', 'Mendez', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (1).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Arnulfo', null, 'Carrera', 'García', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (2).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Bernardo', null, 'López', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (3).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Carlos', null, 'Cetino', 'Ruiz', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (4).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Carlos', 'Crispín', 'Aliñado', 'Asturias', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (4).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'César', 'Augusto', 'Noriega', 'Morales', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (5).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Edgar', 'Raúl', 'Culajay', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (6).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Eliza', null, 'Pirír', 'Sabán', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (7).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Fermina',null, 'Chajón', 'Soto', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (8).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Héctor', 'Leónidas', 'Revolorio', 'Quevedo', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (9).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Hugo', 'Leonel', 'López', 'Villacorta', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (10).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'José', null, 'Muchuch', 'Chutá', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (11).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Manuel', null, 'Encarnación', 'Alarcón', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (12).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Marco', 'Tulio', 'Soto', 'Juárez', 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (13).png', 'EEUU', '2019-01-23');
+insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'María', 'Inés', 'Vásquez', null, 'D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Deportistas\\\Deportista (14).png', 'EEUU', '2019-01-23');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Mario', 'Anibal', 'Alemán', 'Galindo', null, 'EEUU', '2019-01-23');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Mario', null, 'Izariel', 'Villatoro', null, 'EEUU', '2019-01-23');
 insert into Deportista (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Imagen, Pais, FechaDeNacimiento) values (null, 'Nancy', 'Beatriz', 'Calderón', 'Muller', null, 'EEUU', '2019-01-23');
