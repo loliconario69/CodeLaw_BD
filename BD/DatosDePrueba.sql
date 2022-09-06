@@ -42,16 +42,16 @@ insert into Publicidad (id, Grupo, Descripcion, Imagen, Tipo) values (null,'no s
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Libertadores','no lo encotre',null,'2021-02-23','2021-11-27');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Libertadores','no lo encotre',null,'2020-01-21','2020-10-27');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'UEFA Liga de Campeones','no lo encotre',null,'2021-06-22','2022-05-28');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'UEFA Liga de Campeones','no lo encotre',null,'2020-08-08','2021-05-29');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Eurocopa','no lo encotre',null,'2021-06-11','2021-07-11');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Eurocopa','no lo encotre',null,'2019-06-27','2020-08-21');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa América','no lo encotre',null,'2021-06-13','2021-07-10');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa América','no lo encotre',null,'2019-06-14','2019-07-07');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Mundial de la FIFA','no lo encotre',null,'2021-09-12','2021-10-03');
-insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Mundial de la FIFA','no lo encotre',null,'2019-12-11','2019-12-21');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Libertadores','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (1).png','2021-02-23','2021-11-27');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Libertadores','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (2).png','2020-01-21','2020-10-27');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'UEFA Liga de Campeones','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (3).png','2021-06-22','2022-05-28');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'UEFA Liga de Campeones','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (4).png','2020-08-08','2021-05-29');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Eurocopa','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (5).png','2021-06-11','2021-07-11');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Eurocopa','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (6).png','2019-06-27','2020-08-21');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa América','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (7).png','2021-06-13','2021-07-10');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa América','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (8).png','2019-06-14','2019-07-07');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Mundial de la FIFA','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (9).png','2021-09-12','2021-10-03');
+insert into Competencia (id, Nombre, Lugar, Imagen, FechaInicio, FechaFin) values (null,'Copa Mundial de la FIFA','no lo encotre','D:\\\Users\\\Loliconario\\\Desktop\\\Imagenes\\\Competencias\\\Competencia (10).png','2019-12-11','2019-12-21');
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -135,38 +135,38 @@ insert into Juez (Id, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApelli
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2020-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-04-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-05-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-06-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-03-21 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-03-21 04:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2020-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-04-30 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2021-01-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2020-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-04-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-05-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-06-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-03-21 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-03-21 04:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2020-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-04-30 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2021-01-23 00:00:00','no se');
 
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-04-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-05-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-06-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-21 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-21 04:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-04-30 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2018-01-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-04-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-05-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-06-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-03-21 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-03-21 04:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-04-30 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2018-01-23 00:00:00','no se');
 
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-04-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-05-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-06-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-21 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-21 04:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-03-23 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-04-30 00:00:00','no se');
-insert into Encuentro (id, Fecha, Lugar) values (null,'2019-01-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-04-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-05-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-06-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-03-21 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-03-21 04:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-03-23 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-04-30 00:00:00','no se');
+insert into Encuentro (id, Nombre, Fecha, Lugar) values (null,'no tengo ganas de llenar esto','2019-01-23 00:00:00','no se');
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------------------------------------------------------

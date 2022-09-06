@@ -66,6 +66,7 @@ CREATE TABLE Juez (
 
 CREATE TABLE Encuentro (
 	Id int unsigned auto_increment,
+    Nombre varchar(30) not null,
     Fecha datetime not null,
     Lugar varchar(30),
     PRIMARY KEY (Id)
