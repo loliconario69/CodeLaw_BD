@@ -138,7 +138,7 @@ CREATE TABLE SePracticaDeporte (
     IdDeporte mediumint unsigned,
     PRIMARY KEY (IdCompetencia,Nombre,IdDeporte),
     FOREIGN KEY (IdCompetencia,Nombre) REFERENCES Etapa(IdCompetencia,Nombre) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (IdDeporte) REFERENCES Deporte(Id) ON DELETE CASCADE
+    FOREIGN KEY (IdDeporte) REFERENCES Deporte(Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE EcontieneE (
