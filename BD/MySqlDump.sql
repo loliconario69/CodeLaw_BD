@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS `infinitysports`;
 CREATE DATABASE  IF NOT EXISTS `infinitysports` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `infinitysports`;
 -- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
