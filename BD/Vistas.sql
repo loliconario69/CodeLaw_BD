@@ -30,9 +30,64 @@ FROM
     Deporte D ON D.Id = se.IdDeporte;
     
     
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
+    #-----------------------------------------------------------------
     
+/*
+SELECT 
+    Eq.Id AS EquipoId,
+    Eq.Nombre AS EquipoNombre,
+    D.Id AS DeportistaId,
+    CONCAT(D.PrimerNombre, ' ', COALESCE(D.SegundoNombre, ''), ' ', D.PrimerApellido, ' ', COALESCE(D.SegundoApellido, '')) AS DeportistaNombre,
+    CONCAT(COALESCE(P.Puntaje, ''), COALESCE(P.Tiempo, '')) AS Anotacion,
+    EEn.Puntaje
+FROM
+    EcontieneE EE
+        INNER JOIN
+    Encuentro En ON En.Id = EE.IdEncuentro AND EE.IdCompetencia = @IdCompetencia AND EE.NombreEtapa = @NombreEtapa AND En.Id = @IdEncuentro
+        INNER JOIN
+    ParticipaEn P ON P.IdEncuentro = En.Id AND P.IdEquipo = @IdEquipo AND P.IdDeportista = @IdDeportista
+        INNER JOIN
+    Equipo Eq ON Eq.Id = P.IdEquipo
+        INNER JOIN
+    Deportista D ON D.Id = P.IdDeportista
+        LEFT JOIN
+    eparticipaen EEn ON EEn.IdEncuentro = En.Id AND P.IdEquipo = EEn.IdEquipo;
+    */
+ 
+CREATE VIEW vista_DetallesEncuentro AS
+SELECT 
+	EE.IdCompetencia AS IdCompetencia,
+    EE.NombreEtapa AS NombreEtapa,
     
+    En.Id AS EncuentroId,
     
+    Eq.Id AS EquipoId,
+    Eq.Nombre AS EquipoNombre,
+    D.Id AS DeportistaId,
+    CONCAT(D.PrimerNombre, ' ', COALESCE(D.SegundoNombre, ''), ' ', D.PrimerApellido, ' ', COALESCE(D.SegundoApellido, '')) AS DeportistaNombre,
+    CONCAT(COALESCE(P.Puntaje, ''), COALESCE(P.Tiempo, '')) AS Anotacion,
+    EEn.Puntaje
+FROM
+    EcontieneE EE
+        INNER JOIN
+    Encuentro En ON En.Id = EE.IdEncuentro
+        INNER JOIN
+    ParticipaEn P ON P.IdEncuentro = En.Id
+        INNER JOIN
+    Equipo Eq ON Eq.Id = P.IdEquipo
+        INNER JOIN
+    Deportista D ON D.Id = P.IdDeportista
+        LEFT JOIN
+    eparticipaen EEn ON EEn.IdEncuentro = En.Id AND P.IdEquipo = EEn.IdEquipo;
     
     
     
