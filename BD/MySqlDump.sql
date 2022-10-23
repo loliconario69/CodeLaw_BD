@@ -547,7 +547,7 @@ CREATE TABLE `Publicidad` (
 
 LOCK TABLES `Publicidad` WRITE;
 /*!40000 ALTER TABLE `Publicidad` DISABLE KEYS */;
-INSERT INTO `Publicidad` VALUES (1,'no se','jajajaj','yeah',1);
+INSERT INTO `Publicidad` VALUES (1,'grupo 1','jajajaj','%TMP%\\Imagenes\\Publicidad\\1.png',1),(2,'grupo 2','jajajaj','%TMP%\\Imagenes\\Publicidad\\2.png',1),(3,'grupo 3','jajajaj','%TMP%\\Imagenes\\Publicidad\\3.png',1),(4,'grupo 4','jajajaj','%TMP%\\Imagenes\\Publicidad\\4.png',1),(5,'grupo 5','jajajaj','%TMP%\\Imagenes\\Publicidad\\5.png',1),(6,'grupo 6','jajajaj','%TMP%\\Imagenes\\Publicidad\\6.png',1),(7,'grupo 7','jajajaj','%TMP%\\Imagenes\\Publicidad\\7.png',1),(8,'grupo 8','jajajaj','%TMP%\\Imagenes\\Publicidad\\8.png',1),(9,'grupo 9','jajajaj','%TMP%\\Imagenes\\Publicidad\\9.png',1);
 /*!40000 ALTER TABLE `Publicidad` ENABLE KEYS */;
 UNLOCK TABLES;
 
