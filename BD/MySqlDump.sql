@@ -471,7 +471,7 @@ CREATE TABLE `ParticipaEn` (
 
 LOCK TABLES `ParticipaEn` WRITE;
 /*!40000 ALTER TABLE `ParticipaEn` DISABLE KEYS */;
-INSERT INTO `ParticipaEn` VALUES (1,15,1,NULL,10),(2,16,1,NULL,10),(2,16,2,NULL,10),(3,17,2,NULL,10),(3,17,3,NULL,10),(4,18,3,NULL,10),(4,18,4,NULL,10),(5,19,4,NULL,10),(5,19,5,NULL,10),(6,20,4,NULL,10),(6,20,6,NULL,10),(7,21,5,NULL,10),(8,22,6,NULL,10),(9,23,7,NULL,10),(10,24,8,NULL,10),(10,24,9,NULL,10),(10,24,10,NULL,10);
+INSERT INTO `ParticipaEn` VALUES (1,15,1,NULL,10),(4,16,1,NULL,10),(4,16,2,NULL,10),(5,17,2,NULL,10),(5,17,3,NULL,10),(6,18,3,NULL,10),(6,18,4,NULL,10),(7,19,4,NULL,10),(7,19,5,NULL,10),(8,20,4,NULL,10),(8,20,6,NULL,10),(9,21,5,NULL,10),(10,22,6,NULL,10),(11,23,7,NULL,10),(12,24,8,NULL,10),(12,24,9,NULL,10),(12,24,10,NULL,10);
 /*!40000 ALTER TABLE `ParticipaEn` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -536,7 +536,6 @@ CREATE TABLE `Publicidad` (
   `Grupo` varchar(15) NOT NULL,
   `Descripcion` varchar(100) NOT NULL,
   `Imagen` varchar(255) NOT NULL,
-  `Tipo` tinyint(4) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -547,7 +546,7 @@ CREATE TABLE `Publicidad` (
 
 LOCK TABLES `Publicidad` WRITE;
 /*!40000 ALTER TABLE `Publicidad` DISABLE KEYS */;
-INSERT INTO `Publicidad` VALUES (1,'grupo 1','jajajaj','%TMP%\\Imagenes\\Publicidad\\1.png',1),(2,'grupo 2','jajajaj','%TMP%\\Imagenes\\Publicidad\\2.png',1),(3,'grupo 3','jajajaj','%TMP%\\Imagenes\\Publicidad\\3.png',1),(4,'grupo 4','jajajaj','%TMP%\\Imagenes\\Publicidad\\4.png',1),(5,'grupo 5','jajajaj','%TMP%\\Imagenes\\Publicidad\\5.png',1),(6,'grupo 6','jajajaj','%TMP%\\Imagenes\\Publicidad\\6.png',1),(7,'grupo 7','jajajaj','%TMP%\\Imagenes\\Publicidad\\7.png',1),(8,'grupo 8','jajajaj','%TMP%\\Imagenes\\Publicidad\\8.png',1),(9,'grupo 9','jajajaj','%TMP%\\Imagenes\\Publicidad\\9.png',1);
+INSERT INTO `Publicidad` VALUES (1,'grupo 1','jajajaj','%TMP%\\Imagenes\\Publicidad\\1.png'),(2,'grupo 2','jajajaj','%TMP%\\Imagenes\\Publicidad\\2.png'),(3,'grupo 3','jajajaj','%TMP%\\Imagenes\\Publicidad\\3.png'),(4,'grupo 4','jajajaj','%TMP%\\Imagenes\\Publicidad\\4.png'),(5,'grupo 5','jajajaj','%TMP%\\Imagenes\\Publicidad\\5.png'),(6,'grupo 6','jajajaj','%TMP%\\Imagenes\\Publicidad\\6.png'),(7,'grupo 7','jajajaj','%TMP%\\Imagenes\\Publicidad\\7.png'),(8,'grupo 8','jajajaj','%TMP%\\Imagenes\\Publicidad\\8.png'),(9,'grupo 9','jajajaj','%TMP%\\Imagenes\\Publicidad\\9.png');
 /*!40000 ALTER TABLE `Publicidad` ENABLE KEYS */;
 UNLOCK TABLES;
 
