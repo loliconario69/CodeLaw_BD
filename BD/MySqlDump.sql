@@ -85,7 +85,7 @@ BEFORE INSERT ON Competencia
 FOR EACH ROW
 BEGIN
 
-IF (NEW.FechaInicio >= NEW.FechaFin) THEN
+IF (NEW.FechaInicio > NEW.FechaFin) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'FechaInicio no puede ser mayor a FechaFin';
 END IF;
@@ -375,7 +375,7 @@ CREATE TABLE `Etapa` (
   `Nombre` varchar(30) NOT NULL,
   `Lugar` varchar(50) NOT NULL,
   PRIMARY KEY (`IdCompetencia`,`Nombre`),
-  CONSTRAINT `Etapa_ibfk_1` FOREIGN KEY (`IdCompetencia`) REFERENCES `Competencia` (`Id`)
+  CONSTRAINT `Etapa_ibfk_1` FOREIGN KEY (`IdCompetencia`) REFERENCES `Competencia` (`Id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
