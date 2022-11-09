@@ -1,3 +1,6 @@
+# NOTA: las IPs son a corde al esquema lógico de redes
+
+
 # APIs create-------------------------------------------------
 CREATE USER 'API_Publicidad'@'192.168.2.%' IDENTIFIED BY '9usr5F9kJHnKzJZ2N2cLhkpW';
 CREATE USER 'API_Resultados'@'192.168.2.%' IDENTIFIED BY 'bWtMgf3vHZxebzq3YprGLMhD';
