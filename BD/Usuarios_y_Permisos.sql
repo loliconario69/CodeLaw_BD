@@ -1,96 +1,91 @@
 # APIs create-------------------------------------------------
-create user 'API_Publicidad'@'127.0.0.1' identified by 'contraseña';
-create user 'API_Resultados'@'127.0.0.1' identified by 'contraseña';
-create user 'API_Autenticacion'@'127.0.0.1' identified by 'contraseña';
-create user 'API_Suscripcion'@'127.0.0.1' identified by 'contraseña';
-
-# USUARIOS create----------------------------------------------
-create user 'Auto-Registro'@'127.0.0.1' identified by 'contraseña';
+CREATE USER 'API_Publicidad'@'192.168.2.%' IDENTIFIED BY '9usr5F9kJHnKzJZ2N2cLhkpW';
+CREATE USER 'API_Resultados'@'192.168.2.%' IDENTIFIED BY 'bWtMgf3vHZxebzq3YprGLMhD';
+CREATE USER 'API_Autenticacion'@'192.168.2.%' IDENTIFIED BY 'V5sVhmUqNj92HDAShB9zrkAN';
+CREATE USER 'API_Suscripcion'@'192.168.2.%' IDENTIFIED BY 'atn8wgS6spcSvfnWEsE3QXAC';
 
 # ADMINISTRADORES create-----------------------------------------------------
-create user 'Administrador'@'127.0.0.1' identified by 'contraseña';
-create user 'Funcionario'@'127.0.0.1' identified by 'contraseña';
+CREATE USER 'Administrador'@'192.168.4.%' IDENTIFIED BY '9vkXzs9bUAeaMDjszbN5eNPc';
+CREATE USER 'Funcionario'@'192.168.3.%' IDENTIFIED BY '4HGawgXDQ5LtAKbG8QdJAphZ';
 
-create user 'AdminBD'@'127.0.0.1' identified by 'contraseña';
+# ADMINISTRADOR Base de daTOs create-----------------------------------------------------
+CREATE USER 'AdminBD'@'127.0.0.1' IDENTIFIED BY 'mJj3J8DT55BUTr6t3rtUatQS';
 
-#------------------------------------------------------------------------
-#------------------------------------------------------------------------
-#------------------------------------------------------------------------
-#------------------------------------------------------------------------
-
-
-# APIs grant--------------------------------------------------------------
-grant select on infinitysports.publicidad to 'API_Publicidad'@'127.0.0.1';
-
-grant select,insert,delete on infinitysports.ususcribec to 'API_Publicidad'@'127.0.0.1';
-grant select,insert,delete on infinitysports.ususcribed to 'API_Publicidad'@'127.0.0.1';
-grant select,insert,delete on infinitysports.ususcribeeq to 'API_Publicidad'@'127.0.0.1';
-grant select,insert,delete on infinitysports.ususcribeen to 'API_Publicidad'@'127.0.0.1';
+# REPLICACIÓN create-----------------------------------------------------
+CREATE USER 'ReplicationUser'@'192.168.2.%' IDENTIFIED BY 'PbVKrpQSEhGTKxJw7eW9R4e7';
 
 
-grant select on infinitysports.Deporte to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.Deportista to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.DintegraE to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.EcontieneE to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.Encuentro to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.EparticipaEn to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.Equipo to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.Etapa to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.EtieneJ to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.Juez to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.ParticipaEn to 'API_Resultados'@'127.0.0.1';
-grant select on infinitysports.SePracticaDeporte to 'API_Resultados'@'127.0.0.1';
+# APIs GRANT--------------------------------------------------------------
+GRANT SELECT ON infinitysports.publicidad TO 'API_Publicidad'@'192.168.2.%';
+
+GRANT SELECT,INSERT,DELETE ON infinitysports.ususcribec TO 'API_Suscripcion'@'192.168.2.%';
+GRANT SELECT,INSERT,DELETE ON infinitysports.ususcribed TO 'API_Suscripcion'@'192.168.2.%';
+GRANT SELECT,INSERT,DELETE ON infinitysports.ususcribeeq TO 'API_Suscripcion'@'192.168.2.%';
+GRANT SELECT,INSERT,DELETE ON infinitysports.ususcribeen TO 'API_Suscripcion'@'192.168.2.%';
 
 
-grant select on infinitysports.usuario to 'API_Autenticacion'@'127.0.0.1';
+GRANT SELECT ON infinitysports.Deporte TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.Deportista TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.DintegraE TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.EcONtieneE TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.Encuentro TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.EparticipaEn TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.Equipo TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.Etapa TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.EtieneJ TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.Juez TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.ParticipaEn TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.SePracticaDeporte TO 'API_Resultados'@'192.168.2.%';
 
 
-# USUARIOS grant--------------------------------------------------------------
+GRANT SELECT,INSERT,DELETE ON infinitysports.usuario TO 'API_Autenticacion'@'192.168.2.%';
 
 
-grant select, insert on infinitysports.usuario to 'Auto-Registro'@'127.0.0.1';
+# ADMINISTRADOR Base de daTOs GRANT-----------------------------------------------------
+GRANT all privileges ON infinitysports.* TO 'AdminBD'@'127.0.0.1';
 
+# ADMINISTRADORES GRANT-----------------------------------------------------
+GRANT SELECT,INSERT,DELETE,UPDATE ON infinitysports.* TO 'Administrador'@'192.168.4.%';
 
-# ADMINISTRADORES grant-----------------------------------------------------
+GRANT INSERT, UPDATE, DELETE, SELECT ON infinitysports.publicidad TO 'Funcionario'@'192.168.3.%';
+GRANT INSERT, UPDATE, DELETE, SELECT ON infinitysports.usuario TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Deporte TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Deportista TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.DintegraE TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.EcONtieneE TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Encuentro TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.EparticipaEn TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Equipo TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Etapa TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.EtieneJ TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Juez TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.ParticipaEn TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.SePracticaDeporte TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.UsuscribeC TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.UsuscribeEq TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.UsuscribeEn TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.UsuscribeD TO 'Funcionario'@'192.168.3.%';
 
-grant all privileges on infinitysports.* to 'AdminBD'@'127.0.0.1';
-
-grant select,insert,delete,update on infinitysports.* to 'Administrador'@'127.0.0.1';
-
-grant insert, update, delete, select on infinitysports.publicidad to 'Funcionario'@'127.0.0.1';
-grant insert, update, delete, select on infinitysports.usuario to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.Deporte to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.Deportista to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.DintegraE to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.EcontieneE to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.Encuentro to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.EparticipaEn to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.Equipo to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.Etapa to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.EtieneJ to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.Juez to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.ParticipaEn to 'Funcionario'@'127.0.0.1';
-grant select,insert,update,delete on infinitysports.SePracticaDeporte to 'Funcionario'@'127.0.0.1';
-
+# REPLICACIÓN create-----------------------------------------------------
+GRANT REPLICATION SLAVE ON *.* TO 'ReplicationUser'@'192.168.2.%';
 
 
 FLUSH privileges;
 
-
-
 /*
-# APIs-------------------------------------------------
-DROP user 'API_Publicidad'@'127.0.0.1';
-DROP user 'API_Resultados'@'127.0.0.1';
-DROP user 'API_Autenticacion'@'127.0.0.1';
+# APIs create-------------------------------------------------
+DROP USER 'API_Publicidad'@'192.168.2.%';
+DROP USER 'API_Resultados'@'192.168.2.%';
+DROP USER 'API_Autenticacion'@'192.168.2.%';
+DROP USER 'API_Suscripcion'@'192.168.2.%';
 
-# USUARIOS----------------------------------------------
-DROP user 'Auto-Registro'@'127.0.0.1';
-DROP user 'Auto-Eliminacion'@'127.0.0.1';
+# ADMINISTRADORES create-----------------------------------------------------
+DROP USER 'Administrador'@'192.168.4.%';
+DROP USER 'Funcionario'@'192.168.3.%';
 
-# ADMINISTRADORES-----------------------------------------------------
-DROP user 'Administrador'@'127.0.0.1';
-DROP user 'AdminBD'@'127.0.0.1';
-DROP user 'Funcionario'@'127.0.0.1';
+# ADMINISTRADOR Base de daTOs create-----------------------------------------------------
+DROP USER 'AdminBD'@'127.0.0.1';
+
+# REPLICACIÓN create-----------------------------------------------------
+DROP USER 'ReplicationUser'@'192.168.2.%';
 */
-
