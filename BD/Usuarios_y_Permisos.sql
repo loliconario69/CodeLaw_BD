@@ -30,7 +30,7 @@ GRANT SELECT,INSERT,DELETE ON infinitysports.ususcribeen TO 'API_Suscripcion'@'1
 GRANT SELECT ON infinitysports.Deporte TO 'API_Resultados'@'192.168.2.%';
 GRANT SELECT ON infinitysports.Deportista TO 'API_Resultados'@'192.168.2.%';
 GRANT SELECT ON infinitysports.DintegraE TO 'API_Resultados'@'192.168.2.%';
-GRANT SELECT ON infinitysports.EcONtieneE TO 'API_Resultados'@'192.168.2.%';
+GRANT SELECT ON infinitysports.EcontieneE TO 'API_Resultados'@'192.168.2.%';
 GRANT SELECT ON infinitysports.Encuentro TO 'API_Resultados'@'192.168.2.%';
 GRANT SELECT ON infinitysports.EparticipaEn TO 'API_Resultados'@'192.168.2.%';
 GRANT SELECT ON infinitysports.Equipo TO 'API_Resultados'@'192.168.2.%';
@@ -44,8 +44,8 @@ GRANT SELECT ON infinitysports.SePracticaDeporte TO 'API_Resultados'@'192.168.2.
 GRANT SELECT,INSERT,DELETE ON infinitysports.usuario TO 'API_Autenticacion'@'192.168.2.%';
 
 
-# ADMINISTRADOR Base de daTOs GRANT-----------------------------------------------------
-GRANT all privileges ON infinitysports.* TO 'AdminBD'@'127.0.0.1';
+# ADMINISTRADOR Base de datos GRANT-----------------------------------------------------
+GRANT all privileges ON *.* TO 'AdminBD'@'127.0.0.1';
 
 # ADMINISTRADORES GRANT-----------------------------------------------------
 GRANT SELECT,INSERT,DELETE,UPDATE ON infinitysports.* TO 'Administrador'@'192.168.4.%';
@@ -55,7 +55,7 @@ GRANT INSERT, UPDATE, DELETE, SELECT ON infinitysports.usuario TO 'Funcionario'@
 GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Deporte TO 'Funcionario'@'192.168.3.%';
 GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Deportista TO 'Funcionario'@'192.168.3.%';
 GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.DintegraE TO 'Funcionario'@'192.168.3.%';
-GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.EcONtieneE TO 'Funcionario'@'192.168.3.%';
+GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.EcontieneE TO 'Funcionario'@'192.168.3.%';
 GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Encuentro TO 'Funcionario'@'192.168.3.%';
 GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.EparticipaEn TO 'Funcionario'@'192.168.3.%';
 GRANT SELECT,INSERT,UPDATE,DELETE ON infinitysports.Equipo TO 'Funcionario'@'192.168.3.%';
