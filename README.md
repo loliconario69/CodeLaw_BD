@@ -1,2 +1,2 @@
-# CodeLaw_BD_y_SO
+# CodeLaw_BD
 ## Este es el repositorio de Base de datos
